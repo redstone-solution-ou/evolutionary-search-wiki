@@ -17,6 +17,7 @@ cross-paper synthesis, see the concept pages.
 | [mcc](mcc.md) | Minimal Criterion Coevolution: A New Approach to Open-Ended Search | Brant, Stanley | 2017 | GECCO | neuroevolution / open-ended |
 | [model-merging](model-merging.md) | Evolutionary Optimization of Model Merging Recipes | Akiba, Shing, Tang, Sun, Ha | 2024 | Sakana AI (arXiv, later Nature Machine Intelligence) | evolutionary merging of trained weights |
 | [paired](paired.md) | Emergent Complexity and Zero-shot Transfer via Unsupervised Environment Design | Dennis, Jaques, Vinitsky et al. | 2020 | NeurIPS | deep RL / UED |
+| [plr](plr.md) | Prioritized Level Replay | Jiang, Grefenstette, Rocktäschel | 2021 | ICML | deep RL / UED (replay-based) |
 | [shinkaevolve](shinkaevolve.md) | ShinkaEvolve: Towards Open-Ended and Sample-Efficient Program Evolution | Lange, Imajuku, Cetin | 2025 | Sakana AI tech report | LLM-driven program evolution |
 
 ## Grouping by lineage
@@ -64,13 +65,20 @@ effect of mutual viability.
   navigators and procedurally evolved mazes under a binary minimal
   criterion.
 
-**Deep-RL adversarial environment design.** Papers that train an RL
-agent in environments produced by another learned process; the
-curriculum is a side effect of the adversarial loop.
+**Deep-reinforcement-learning adversarial environment design.**
+Papers that train a reinforcement-learning agent in environments
+produced by another learned process or selected by a priority
+signal; the curriculum is a side effect of the adversarial loop or
+the replay priority.
 
-- [PAIRED](paired.md) — environment adversary maximizes regret between
-  protagonist and antagonist agents; produces solvable, increasingly
-  difficult environments.
+- [PAIRED](paired.md) — environment adversary maximizes regret
+  between protagonist and antagonist agents; produces solvable,
+  increasingly difficult environments.
+- [Prioritized Level Replay](plr.md) — drops the learned adversary
+  entirely; maintains a buffer of past levels and prioritizes replay
+  by a value-function-derived learning-potential signal. Simpler,
+  cheaper, and typically higher-performing than PAIRED on
+  procedural-generation benchmarks.
 
 **LLM-driven program evolution.** Papers that keep the EA
 selection-mutation-evaluation loop but use a large language model as

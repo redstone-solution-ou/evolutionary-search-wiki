@@ -105,10 +105,11 @@ policy.
 - **PAIRED** ([papers/paired.md](../papers/paired.md)) — antagonist
   policy as the proxy oracle; learned adversary as the environment
   policy.
-- **Prioritized Level Replay (PLR)** (Jiang et al. 2021) — no learned
-  adversary; sample past levels with probability proportional to
-  estimated regret (Temporal Difference error or value-loss as proxy).
-  Often outperforms PAIRED on procedurally-generated benchmarks.
+- **[Prioritized Level Replay](../papers/plr.md)** (Jiang et al.
+  2021) — no learned adversary; sample past levels with probability
+  proportional to estimated regret (Temporal Difference error or
+  value-loss as proxy). Often outperforms PAIRED on procedurally-
+  generated benchmarks.
 - **ACCEL** (Parker-Holder et al. 2022) — combine PLR's regret-based
   level selection with mutation-based level editing. The "evolutionary
   curriculum" branch of UED.

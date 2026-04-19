@@ -139,6 +139,7 @@ evolutionary-search-wiki
     +-- island-ga     (Belding 1995, ICGA / cites Tanese 1989, Whitley 1998)
     +-- mcc           (Brant & Stanley 2017, GECCO)
     +-- paired        (Dennis et al. 2020, NeurIPS)
+    +-- plr           (Jiang et al. 2021, ICML)
     +-- alphazero          (Silver et al. 2017/2018, Science)
     +-- grammatical-evolution (O'Neill & Ryan 2001, IEEE TEC)
     +-- lmx                (Meyerson et al. 2023, ACM TELO 2024)

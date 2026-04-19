@@ -94,6 +94,10 @@ within a section are sorted alphabetically.
   Protagonist Antagonist Induced Regret Environment Design; formalizes
   unsupervised environment design and uses regret as the adversary's
   objective.
+- [papers/plr.md](papers/plr.md) — Jiang, Grefenstette, Rocktäschel,
+  ICML 2021. Prioritized Level Replay; the learned-adversary-free
+  alternative to PAIRED, using value-function-derived learning-
+  potential scores as replay priorities.
 - [papers/shinkaevolve.md](papers/shinkaevolve.md) — Lange, Imajuku,
   Cetin, Sakana AI 2025. Open-source, sample-efficient counterpart to
   AlphaEvolve; power-law parent sampling, code novelty rejection, and

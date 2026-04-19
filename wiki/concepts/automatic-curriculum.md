@@ -131,7 +131,8 @@ is plausible.
   schedule emerges from the population dynamics.
 - **PAIRED** ([papers/paired.md](../papers/paired.md)) — regret-driven
   adversary; difficulty schedule fully implicit.
-- **PLR** (Jiang et al. 2021) — prioritized replay of high-regret
+- **[Prioritized Level Replay](../papers/plr.md)** (Jiang et al.
+  2021) — prioritized replay of high-regret
   past levels; cheaper than PAIRED, often as good or better.
 - **Adversarially Compounding Complexity by Editing Levels (ACCEL)**
   (Parker-Holder et al. 2022) — PLR plus mutation-based level

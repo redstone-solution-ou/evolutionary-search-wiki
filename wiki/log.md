@@ -129,6 +129,33 @@ unexplained terms across the wiki:
 
 All 385 internal links verified to resolve.
 
+## [2026-04-19] promote | Prioritized Level Replay (Jiang et al., ICML 2021)
+
+Promoted Jiang, Grefenstette & Rocktäschel, *"Prioritized Level
+Replay"* (arXiv:2010.03934, ICML 2021) from foundation-PDF
+reference to a full paper leaf at
+[papers/plr.md](papers/plr.md). Moved the PDF from
+`papers/foundations/` to `papers/` accordingly. Added to
+[papers/papers.md](papers/papers.md) under the "deep-
+reinforcement-learning adversarial environment design" lineage
+alongside PAIRED. Replaced all previous inline mentions of
+Prioritized Level Replay in the concept pages
+([paired.md](papers/paired.md),
+[unsupervised-environment-design.md](concepts/unsupervised-environment-design.md),
+[regret-as-objective.md](concepts/regret-as-objective.md),
+[automatic-curriculum.md](concepts/automatic-curriculum.md)) with
+links to the new leaf. Updated the slug list in
+[CLAUDE.md](../CLAUDE.md) (ten slugs now) and the overview paper
+map.
+
+Rationale for the promotion: a confidential research conversation
+independently rederived a Prioritized-Level-Replay-adjacent design
+(budget-only antagonist producing a learning-potential signal,
+no learned environment adversary). The prior foundation-PDF
+reference was insufficient — this technique deserves first-class
+treatment as the dominant alternative to Protagonist Antagonist
+Induced Regret Environment Design.
+
 ## [2026-04-19] ingest | Grammatical Evolution (O'Neill & Ryan, IEEE TEC 2001)
 
 Added O'Neill & Ryan, *"Grammatical Evolution"*, IEEE Transactions

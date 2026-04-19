@@ -98,10 +98,9 @@ Replay (PLR), ACCEL, and dual-curriculum design — the modern
   diagnostic tools to detect it during training.
 
 ## Follow-up work and dialogue
-The dominant follow-up is Prioritized Level Replay
-([PLR](../../papers/foundations/plr_jiang_2010.03934.pdf); Jiang et
-al. 2021) — no learned adversary, just a buffer that prioritises
-replay of past levels proportional to estimated regret. PLR is
+The dominant follow-up is [Prioritized Level Replay](./plr.md)
+(Jiang et al. 2021) — no learned adversary, just a buffer that
+prioritises replay of past levels proportional to estimated regret. PLR is
 cheaper, often as good or better, and is the de facto baseline for
 procedurally-generated benchmarks. Adversarially Compounding
 Complexity by Editing Levels (ACCEL; Parker-Holder et al. 2022)

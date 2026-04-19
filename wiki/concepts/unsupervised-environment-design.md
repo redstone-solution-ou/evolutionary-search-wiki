@@ -113,10 +113,10 @@ the protagonist plays the minimax regret policy.
   threshold. POET is a population-based predecessor of PAIRED.
 - **PAIRED** ([papers/paired.md](../papers/paired.md)) — the
   formalization plus the regret-based instantiation.
-- **Prioritized Level Replay (PLR) / Replay-Guided ACED** (Jiang et
-  al. 2021) — drops the learned adversary in favor of replaying
-  high-regret levels from a buffer; often more sample-efficient than
-  PAIRED.
+- **[Prioritized Level Replay](../papers/plr.md) / Replay-Guided
+  ACED** (Jiang et al. 2021) — drops the learned adversary in favor
+  of replaying high-regret levels from a buffer; often more
+  sample-efficient than PAIRED.
 - **Adversarially Compounding Complexity by Editing Levels (ACCEL)**
   (Parker-Holder et al. 2022) — combines PLR with evolutionary
   editing of past levels to generate new ones.
