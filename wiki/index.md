@@ -73,6 +73,11 @@ within a section are sorted alphabetically.
   Distributed/island GA on Royal Road benchmarks; with Tanese 1989
   and Whitley/Rana/Heckendorn 1998 cited as the seminal and
   theoretical references.
+- [papers/lmx.md](papers/lmx.md) — Meyerson et al., 2023 / ACM TELO
+  2024. Language Model Crossover: pretrained LLM as a general
+  variation operator over any text-serialisable genotype; the
+  foundational reference for AlphaEvolve, ShinkaEvolve, and any
+  JSON / YAML / DSL-as-genome evolutionary loop.
 - [papers/mcc.md](papers/mcc.md) — Brant & Stanley, GECCO 2017.
   Minimal Criterion Coevolution, dual-population NEAT-driven
   open-ended search on coevolving mazes.

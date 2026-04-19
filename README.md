@@ -58,7 +58,7 @@ The full set, in reading order:
 
 ## Scope (as of 2026-04)
 
-Version 0 of the wiki covers seven seed papers that span the six
+Version 0 of the wiki covers eight seed papers that span the six
 lineages the wiki is built around:
 
 - [AlphaZero](wiki/papers/alphazero.md) — Silver et al., DeepMind
@@ -76,6 +76,11 @@ lineages the wiki is built around:
 - [PAIRED](wiki/papers/paired.md) — Dennis et al., NeurIPS 2020 —
   deep RL framing, regret-maximizing environment adversary, the
   canonical reference for unsupervised environment design.
+- [LMX — Language Model Crossover](wiki/papers/lmx.md) — Meyerson,
+  Nelson, Bradley, Gaier, Moradi, Hoover, Lehman, 2023 / ACM TELO
+  2024 — the foundational "LLM as general-purpose crossover
+  operator" paper; applies to any text-serialisable genotype (code,
+  JSON configs, DSL programs).
 - [AlphaEvolve](wiki/papers/alphaevolve.md) — Novikov et al., Google
   DeepMind 2025 — scaled-up LLM-driven program evolution; demonstrated
   novel algorithmic discoveries including a Strassen improvement on

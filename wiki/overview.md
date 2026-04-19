@@ -140,6 +140,7 @@ evolutionary-search-wiki
     +-- mcc           (Brant & Stanley 2017, GECCO)
     +-- paired        (Dennis et al. 2020, NeurIPS)
     +-- alphazero     (Silver et al. 2017/2018, Science)
+    +-- lmx           (Meyerson et al. 2023, ACM TELO 2024)
     +-- alphaevolve   (Novikov et al. 2025, DeepMind)
     +-- shinkaevolve  (Lange et al. 2025, Sakana AI)
     +-- model-merging (Akiba et al. 2024, Sakana AI)

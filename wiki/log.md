@@ -129,6 +129,30 @@ unexplained terms across the wiki:
 
 All 385 internal links verified to resolve.
 
+## [2026-04-19] ingest | LMX — Language Model Crossover (arXiv:2302.12170)
+
+Added Meyerson, Nelson, Bradley, Gaier, Moradi, Hoover & Lehman,
+*"Language Model Crossover: Variation through Few-Shot Prompting"*,
+ACM Transactions on Evolutionary Learning and Optimization 2024
+(arXiv preprint 2023). Created [papers/lmx.md](papers/lmx.md).
+This is the canonical "LLM as general-purpose crossover operator
+over arbitrary text-serialisable genotypes" paper — the theoretical
+foundation for AlphaEvolve / ShinkaEvolve / FunSearch as well as
+for any future work evolving JSON configs, YAML pipelines, DSL
+programs, or other structured-text representations.
+
+Positioned in [concepts/llm-driven-evolution.md](concepts/llm-driven-evolution.md)
+"Design choices in the literature" as the crossover-side companion
+to Evolution through Large Models (ELM; Lehman et al. 2022, the
+mutation-side predecessor, which is not separately ingested but is
+referenced in the LMX leaf and concept page). Added to
+[papers/papers.md](papers/papers.md) under the "LLM-driven program
+evolution" lineage grouping, reordered so LMX appears first (as
+the foundational paper) followed by AlphaEvolve and ShinkaEvolve
+(as the scaled application systems). Updated the slug list in
+[CLAUDE.md](../CLAUDE.md) (eight slugs now) and the overview
+paper map.
+
 ## [2026-04-19] ingest | Model Merging (Akiba et al., arXiv:2403.13187)
 
 Added Akiba, Shing, Tang, Sun & Ha, *"Evolutionary Optimization of

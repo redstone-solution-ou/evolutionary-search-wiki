@@ -12,6 +12,7 @@ cross-paper synthesis, see the concept pages.
 | [alphaevolve](alphaevolve.md) | AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery | Novikov, Vũ, Eisenberger et al. | 2025 | Google DeepMind white paper | LLM-driven program evolution |
 | [alphazero](alphazero.md) | Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm | Silver, Hubert, Schrittwieser et al. | 2017/2018 | arXiv / Science | self-play coevolution |
 | [island-ga](island-ga.md) | The Distributed Genetic Algorithm Revisited | Belding | 1995 | ICGA-95 | parallel / distributed GA |
+| [lmx](lmx.md) | Language Model Crossover: Variation through Few-Shot Prompting | Meyerson, Nelson, Bradley, Gaier, Moradi, Hoover, Lehman | 2023 / 2024 | arXiv / ACM TELO | LLM-driven evolution (foundational) |
 | [mcc](mcc.md) | Minimal Criterion Coevolution: A New Approach to Open-Ended Search | Brant, Stanley | 2017 | GECCO | neuroevolution / open-ended |
 | [model-merging](model-merging.md) | Evolutionary Optimization of Model Merging Recipes | Akiba, Shing, Tang, Sun, Ha | 2024 | Sakana AI (arXiv, later Nature Machine Intelligence) | evolutionary merging of trained weights |
 | [paired](paired.md) | Emergent Complexity and Zero-shot Transfer via Unsupervised Environment Design | Dennis, Jaques, Vinitsky et al. | 2020 | NeurIPS | deep RL / UED |
@@ -58,8 +59,17 @@ curriculum is a side effect of the adversarial loop.
 
 **LLM-driven program evolution.** Papers that keep the EA
 selection-mutation-evaluation loop but use a large language model as
-the variation operator over source code.
+the variation operator over source code or any text-serialisable
+genotype.
 
+- [LMX — Language Model Crossover](lmx.md) — Meyerson et al.,
+  2023 / ACM TELO 2024. The foundational paper: a pretrained LLM,
+  prompted with several parent examples, naturally produces outputs
+  that behave like evolutionary crossover, across arbitrary
+  text-serialisable genotypes (code, configs, JSON, sentences,
+  math expressions, image prompts). The theoretical foundation for
+  the two systems below and for evolving JSON / YAML / DSL
+  representations generally.
 - [AlphaEvolve](alphaevolve.md) — Google DeepMind's scaled-up
   successor to FunSearch; full-file evolution with SOTA LLM ensemble,
   hours-long evaluators, and demonstrated novel algorithmic

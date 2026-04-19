@@ -118,10 +118,25 @@ LLM samples, where prior LLM-driven approaches needed thousands.
 
 ## Design choices in the literature
 
-- **FunSearch** (Romera-Paredes et al. 2024, Nature) — the precursor:
-  a single function evolved by a small LLM, millions of samples,
-  single metric. Established the pattern; famously discovered new
-  cap-set constructions in extremal combinatorics.
+- **Evolution through Large Models (ELM)** (Lehman, Gordon, Jain,
+  Ndousse, Yeh & Stanley, GPTP 2022, arXiv:2206.08896) — the
+  seminal "LLM as mutation operator" paper. Applied to evolving
+  Python programs that generate Sodarace ambulating robots.
+- **[LMX — Language Model Crossover](../papers/lmx.md)** (Meyerson
+  et al., 2023 / ACM TELO 2024). The "LLM as crossover operator"
+  companion to ELM. Establishes that a pretrained LLM prompted
+  with parent examples naturally produces offspring with
+  crossover-like properties, across any text-serialisable genotype
+  (code, configs, JSON, sentences, math). The theoretical
+  foundation for evolving non-code representations with LLMs.
+- **FunSearch** (Romera-Paredes et al. 2024, Nature) — the
+  application-focused precursor: a single function evolved by a
+  small LLM, millions of samples, single metric. Established the
+  pattern; famously discovered new cap-set constructions in
+  extremal combinatorics.
+- **LLM Guided Evolution** (Morris et al., GECCO 2024,
+  arXiv:2403.11446) — LLM-driven evolution of ML-model code at the
+  class-block level; treats Python classes as the genome unit.
 - **Eureka** (Ma et al. 2023) — LLM-driven evolution of reward
   functions for Reinforcement Learning.
 - **AlphaEvolve** ([papers/alphaevolve.md](../papers/alphaevolve.md)) —
