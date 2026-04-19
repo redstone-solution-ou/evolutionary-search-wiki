@@ -13,6 +13,7 @@ cross-paper synthesis, see the concept pages.
 | [alphazero](alphazero.md) | Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm | Silver, Hubert, Schrittwieser et al. | 2017/2018 | arXiv / Science | self-play coevolution |
 | [island-ga](island-ga.md) | The Distributed Genetic Algorithm Revisited | Belding | 1995 | ICGA-95 | parallel / distributed GA |
 | [mcc](mcc.md) | Minimal Criterion Coevolution: A New Approach to Open-Ended Search | Brant, Stanley | 2017 | GECCO | neuroevolution / open-ended |
+| [model-merging](model-merging.md) | Evolutionary Optimization of Model Merging Recipes | Akiba, Shing, Tang, Sun, Ha | 2024 | Sakana AI (arXiv, later Nature Machine Intelligence) | evolutionary merging of trained weights |
 | [paired](paired.md) | Emergent Complexity and Zero-shot Transfer via Unsupervised Environment Design | Dennis, Jaques, Vinitsky et al. | 2020 | NeurIPS | deep RL / UED |
 | [shinkaevolve](shinkaevolve.md) | ShinkaEvolve: Towards Open-Ended and Sample-Efficient Program Evolution | Lange, Imajuku, Cetin | 2025 | Sakana AI tech report | LLM-driven program evolution |
 
@@ -67,6 +68,19 @@ the variation operator over source code.
   sample-efficient counterpart; introduces power-law parent sampling,
   code-embedding novelty rejection, and bandit-based LLM ensemble
   selection.
+
+**Evolutionary merging of trained weights.** Papers that treat the
+weights of pretrained neural networks as the genome and evolve
+merging recipes arithmetically, without gradient-based training per
+offspring. Complementary to the LLM-driven-code lineage above.
+
+- [Model Merging](model-merging.md) — Akiba et al., Sakana AI 2024.
+  Evolves merging recipes in parameter space (weight interpolation
+  coefficients, searched with CMA-ES) and data flow space (which
+  layers from which source model appear in the composite).
+  Demonstrates cross-domain capability transfer; notably produces a
+  Japanese Math LLM by merging a Japanese LLM with an English math
+  LLM.
 
 ## Related wiki pages
 

@@ -140,6 +140,17 @@ LLM samples, where prior LLM-driven approaches needed thousands.
 - **Darwin Gödel Machine** (Zhang et al. 2025) — self-modifying agentic
   system that evolves its own scaffolding, cited as related work in
   ShinkaEvolve.
+- **Evolutionary Optimization of Model Merging Recipes**
+  ([model-merging](../papers/model-merging.md); Akiba et al., Sakana
+  AI 2024) — the "evolve weights" counterpart to the "evolve code"
+  thread. Instead of mutating source code via LLM calls, this work
+  mutates *merging recipes* that combine the weights of multiple
+  pretrained models. Reproduction is arithmetic (thousands of times
+  cheaper than training per offspring), evaluation is end-to-end
+  benchmark-scored, and CMA-ES is used for the continuous
+  merging-coefficient search. Relevant as a separate branch of
+  "evolutionary search over neural networks" that sidesteps the need
+  for gradient-based training per offspring.
 
 ## Open questions
 

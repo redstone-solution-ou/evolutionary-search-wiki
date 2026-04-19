@@ -76,6 +76,10 @@ within a section are sorted alphabetically.
 - [papers/mcc.md](papers/mcc.md) — Brant & Stanley, GECCO 2017.
   Minimal Criterion Coevolution, dual-population NEAT-driven
   open-ended search on coevolving mazes.
+- [papers/model-merging.md](papers/model-merging.md) — Akiba et al.,
+  Sakana AI 2024. Evolutionary search over merging recipes for
+  pretrained neural networks; parameter-space + data-flow-space
+  joint optimization with CMA-ES.
 - [papers/paired.md](papers/paired.md) — Dennis et al., NeurIPS 2020.
   Protagonist Antagonist Induced Regret Environment Design; formalizes
   unsupervised environment design and uses regret as the adversary's

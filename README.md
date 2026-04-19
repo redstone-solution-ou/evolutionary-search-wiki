@@ -58,7 +58,7 @@ The full set, in reading order:
 
 ## Scope (as of 2026-04)
 
-Version 0 of the wiki covers six seed papers that span the five
+Version 0 of the wiki covers seven seed papers that span the six
 lineages the wiki is built around:
 
 - [AlphaZero](wiki/papers/alphazero.md) — Silver et al., DeepMind
@@ -84,11 +84,17 @@ lineages the wiki is built around:
   Sakana AI 2025 — open-source, sample-efficient counterpart to
   AlphaEvolve; power-law parent sampling, code novelty rejection, and
   bandit-based LLM ensemble selection.
+- [Model Merging](wiki/papers/model-merging.md) — Akiba, Shing, Tang,
+  Sun, Ha, Sakana AI 2024 — evolutionary search over merging recipes
+  for pretrained neural networks (parameter-space + data-flow-space
+  joint optimization with CMA-ES); the "evolve weights" counterpart
+  to AlphaEvolve / ShinkaEvolve's "evolve code".
 
-Together they outline the five main lineages — distributed GA,
+Together they outline the six main lineages — distributed GA,
 neuroevolutionary open-ended coevolution, deep-RL adversarial
-curricula, self-play coevolution, and LLM-driven program evolution —
-that the rest of the wiki is structured to grow into. Additions are welcome via pull
+curricula, self-play coevolution, LLM-driven program evolution, and
+evolutionary merging of trained weights — that the rest of the wiki
+is structured to grow into. Additions are welcome via pull
 request; please follow the existing page layout and link conventions.
 
 ## Credits and license

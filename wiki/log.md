@@ -129,6 +129,23 @@ unexplained terms across the wiki:
 
 All 385 internal links verified to resolve.
 
+## [2026-04-19] ingest | Model Merging (Akiba et al., arXiv:2403.13187)
+
+Added Akiba, Shing, Tang, Sun & Ha, *"Evolutionary Optimization of
+Model Merging Recipes"*, Sakana AI 2024 arXiv preprint (later
+published in Nature Machine Intelligence). Created
+[papers/model-merging.md](papers/model-merging.md). Added new
+lineage grouping "Evolutionary merging of trained weights" to
+[papers/papers.md](papers/papers.md) with this paper as the sole
+current leaf. Cross-linked from
+[llm-driven-evolution.md](concepts/llm-driven-evolution.md)
+(positioned as the "evolve weights" counterpart to the "evolve
+code" AlphaEvolve / ShinkaEvolve thread) and from
+[cma-es.md](concepts/cma-es.md) (the paper uses CMA-ES for its
+continuous parameter-space merging-coefficient search, a clean
+application of the algorithm). Updated the slug list in
+[CLAUDE.md](../CLAUDE.md) and the overview paper map.
+
 ## [2026-04-19] ingest | AlphaZero (arXiv:1712.01815)
 
 Added Silver et al., *"Mastering Chess and Shogi by Self-Play with a

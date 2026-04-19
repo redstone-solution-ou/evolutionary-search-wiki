@@ -251,6 +251,13 @@ now the de facto default in continuous-domain QD.
   be read as a very distant relative of CMA-ES's
   "adapt-the-sampler-from-success-signal" philosophy applied to
   discrete mutation operators.
+- [Model Merging](../papers/model-merging.md) — Akiba et al. 2024
+  use CMA-ES specifically for the parameter-space search over
+  continuous merging coefficients (interpolation weights, DARE /
+  TIES sparsification parameters) between pretrained Large Language
+  Models. A direct and well-matched application: continuous,
+  moderate-dimensional, black-box, no gradient available — exactly
+  the sweet spot CMA-ES was designed for.
 
 ## Related wiki pages
 
