@@ -1,6 +1,6 @@
 # Genetic Algorithms
 
-A genetic algorithm (GA) is a population-based search procedure that
+A Genetic Algorithm (GA) is a population-based search procedure that
 maintains a set of candidate solutions, evaluates each by a fitness
 function, and produces the next generation by selection, crossover, and
 mutation.
@@ -57,7 +57,8 @@ A GA is most useful when:
 
 When those conditions fail, a GA degenerates to random search with extra
 steps. Modern continuous-domain practice often prefers
-[evolution strategies](evolutionary-computation.md) (CMA-ES) or
+[evolution strategies](evolutionary-computation.md), notably the
+Covariance Matrix Adaptation Evolution Strategy (CMA-ES), or
 gradient-based optimizers; GAs remain dominant in combinatorial,
 discrete, or program-structured domains.
 

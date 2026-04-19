@@ -1,6 +1,6 @@
 # Novelty and Quality Diversity
 
-Novelty search and quality diversity (QD) are a family of
+Novelty search and Quality Diversity (QD) are a family of
 non-objective evolutionary algorithms that reward behavioral
 divergence — explicitly or implicitly — instead of, or in addition to,
 optimizing a fitness function.
@@ -16,7 +16,7 @@ fails on hard problems. Their alternative was novelty search: replace
 the fitness function with a measure of how *behaviorally different*
 each individual is from everything seen before.
 
-Quality diversity (QD) adds back a quality signal but keeps the
+QD adds back a quality signal but keeps the
 divergence pressure. The output is no longer a single best individual
 but a *collection* of high-quality individuals spread across a
 behavior space — a repertoire of solutions, each occupying a different
@@ -56,7 +56,7 @@ The result is a map showing the best solution found *for each
 behavioral niche* — explicitly multi-modal output instead of a single
 optimum.
 
-**Novelty search with local competition (NSLC)** (Lehman & Stanley
+**Novelty Search with Local Competition (NSLC)** (Lehman & Stanley
 2011) sits between the two: novelty drives exploration, a local
 competition score breaks ties within behavioral neighborhoods.
 
@@ -68,12 +68,13 @@ selection forces the search to spread. In deceptive problems, spreading
 is exactly what is needed to escape the local optima that fitness
 gradients lead into.
 
-Empirically, novelty search and MAP-Elites repeatedly outperform pure
-fitness optimization on hard exploration problems (deceptive mazes,
-robot morphology design, soft-robot control). The catch is that they
-require a behavior characterization (BC) — a hand-designed function
-that maps a phenotype to a low-dimensional behavior descriptor — and
-the choice of BC is deeply load-bearing.
+Empirically, novelty search and MAP-Elites (Multi-dimensional Archive
+of Phenotypic Elites) repeatedly outperform pure fitness optimization
+on hard exploration problems (deceptive mazes, robot morphology
+design, soft-robot control). The catch is that they require a
+Behavior Characterization (BC) — a hand-designed function that maps a
+phenotype to a low-dimensional behavior descriptor — and the choice
+of BC is deeply load-bearing.
 
 ## Trade-offs and failure modes
 

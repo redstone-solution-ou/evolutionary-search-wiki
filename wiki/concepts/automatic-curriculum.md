@@ -19,14 +19,16 @@ some computable way.
 The two seed papers in this wiki produce automatic curricula by very
 different means but with the same downstream effect:
 
-- [PAIRED](../papers/paired.md) trains an environment adversary whose
+- [Protagonist Antagonist Induced Regret Environment Design (PAIRED)](../papers/paired.md)
+  trains an environment adversary whose
   [regret](regret-as-objective.md) reward is positive only when the
   protagonist fails on tasks the antagonist can solve — driving the
   adversary toward tasks at the protagonist's frontier.
-- [MCC](../papers/mcc.md) coevolves agents and mazes under a binary
-  [minimal criterion](minimal-criterion.md); as agents get better,
-  trivially-solvable mazes drop out of viability and harder ones must
-  emerge for the maze population to satisfy its MC.
+- [Minimal Criterion Coevolution (MCC)](../papers/mcc.md) coevolves
+  agents and mazes under a binary
+  [Minimal Criterion (MC)](minimal-criterion.md); as agents get
+  better, trivially-solvable mazes drop out of viability and harder
+  ones must emerge for the maze population to satisfy its MC.
 
 In both cases, no engineer wrote a difficulty schedule. The schedule
 is a side effect of the coupled dynamics.
@@ -49,8 +51,8 @@ loop:
 
 **Selection from a pool.** Maintain a population of tasks. Each step,
 pick a task to train on according to some priority signal (regret,
-value-loss, novelty). Prioritized Level Replay (Jiang et al. 2021) is
-the canonical example.
+value-loss, novelty). Prioritized Level Replay (PLR; Jiang et al.
+2021) is the canonical example.
 
 ```
 pool = task_buffer()

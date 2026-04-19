@@ -6,8 +6,8 @@
 
 ## Abstract
 AlphaEvolve is an evolutionary coding agent that orchestrates an
-autonomous pipeline of LLMs to improve algorithms by directly editing
-code. The system maintains a program database, samples parent programs
+autonomous pipeline of Large Language Models (LLMs) to improve
+algorithms by directly editing code. The system maintains a program database, samples parent programs
 plus inspirations, prompts an LLM ensemble to propose code diffs, and
 filters candidates through automatic evaluators. Applied to Google's
 internal compute stack, AlphaEvolve discovered improvements to data-
@@ -26,7 +26,7 @@ Erdős Minimum Overlap Problem and 11-dimensional Kissing Numbers.
   rather than single Python functions of 10–20 lines.
 - An autonomous pipeline coupling four components: a *program
   database* (an evolving archive), a *prompt sampler* that constructs
-  rich prompts from past trials, an *LLM ensemble* (Gemini 2.0 Flash
+  rich prompts from past trials, an LLM ensemble (Gemini 2.0 Flash
   + Gemini 2.0 Pro), and a pool of *evaluators* that grade candidates
   on user-specified metrics.
 - Demonstrates that LLM-driven evolution can produce *novel
@@ -36,10 +36,10 @@ Erdős Minimum Overlap Problem and 11-dimensional Kissing Numbers.
 - Establishes the SEARCH/REPLACE diff format (later adopted by
   [ShinkaEvolve](./shinkaevolve.md)) as the practical mutation
   primitive for LLM-driven program evolution.
-- Documents the value of multi-metric optimization, hours-long parallel
-  evaluators, and rich prompt context — all departures from FunSearch's
-  minimalist setup that, taken together, account for AlphaEvolve's
-  jump in capability.
+- Documents the value of multi-metric optimization, hours-long
+  parallel evaluators, and rich prompt context — all departures from
+  FunSearch's minimalist setup that, taken together, account for
+  AlphaEvolve's jump in State-Of-The-Art (SOTA) capability.
 
 ## Method at a glance
 The user supplies an initial program, an `evaluate` function, and
@@ -127,8 +127,9 @@ aimed at, now powered by an LLM mutation operator.
 - **Domains used:** matrix multiplication algorithms (14 sizes
   including 4×4 complex), 50+ open mathematical problems
   (Minimum Overlap, Kissing Numbers, etc.), and four Google
-  engineering domains (cluster scheduling, MatMul kernels, TPU
-  arithmetic circuits, transformer attention runtime).
+  engineering domains (cluster scheduling, matrix-multiplication
+  (MatMul) kernels, Tensor Processing Unit (TPU) arithmetic circuits,
+  transformer attention runtime).
 - **Compute disclosed:** "thousands of LLM samples suffice"; per-task
   compute including evaluator hours is not enumerated. Evaluators can
   run for hours in parallel on accelerators (Section 1, Table 1).

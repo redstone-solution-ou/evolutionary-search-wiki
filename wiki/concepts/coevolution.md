@@ -1,13 +1,15 @@
 # Coevolution
 
-Coevolution is any setting where the fitness of an individual depends on
-other simultaneously evolving individuals — either within one population
-(self-play) or across two or more interacting populations.
+Coevolution is any setting — in Evolutionary Computation (EC) or its
+modern deep-learning descendants — where the fitness of an individual
+depends on other simultaneously evolving individuals, either within
+one population (self-play) or across two or more interacting
+populations.
 
 ## Intuition
 
-Plain [genetic algorithms](../foundations/genetic-algorithms.md) score
-each candidate against a fixed objective. Coevolution removes the
+Plain [Genetic Algorithms (GAs)](../foundations/genetic-algorithms.md)
+score each candidate against a fixed objective. Coevolution removes the
 "fixed" assumption: the thing that defines fitness is itself moving.
 The classic image is a predator-prey arms race, but the practically
 important versions are about pairing learners with tests. If you cannot
@@ -57,7 +59,8 @@ The interesting design choices are:
   [regret](regret-as-objective.md), not raw outcome.
 - **Population separation.** Two distinct populations vs one population
   playing itself (self-play). Self-play is a degenerate case of
-  coevolution and is dominant in modern game-playing RL (AlphaZero).
+  coevolution and is dominant in modern game-playing Reinforcement
+  Learning (RL), e.g. AlphaZero.
 
 ## Why it works
 
@@ -111,9 +114,10 @@ a [minimal criterion](minimal-criterion.md).
   adversarial-test coevolution in software testing.
 - **Cooperative coevolution** (Potter & De Jong 2000) — decompose a
   large problem into subcomponents, evolve a population per subcomponent.
-- **Minimal criterion coevolution** ([MCC](../papers/mcc.md)) — drop
-  fitness ranking, keep only a binary "did this interaction satisfy the
-  MC" check. Closer to a viability filter than a competition.
+- **Minimal Criterion Coevolution** ([MCC](../papers/mcc.md)) — drop
+  fitness ranking, keep only a binary "did this interaction satisfy
+  the Minimal Criterion (MC)" check. Closer to a viability filter
+  than a competition.
 - **Regret-driven environment design** ([PAIRED](../papers/paired.md))
   — adversary's reward is the gap between protagonist and antagonist;
   by construction, the adversary is incentivized to produce *solvable*

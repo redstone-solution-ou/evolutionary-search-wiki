@@ -1,17 +1,17 @@
 # LLM-Driven Evolution
 
-LLM-driven evolution keeps the population, selection, and evaluation
-loop of [evolutionary computation](../foundations/evolutionary-computation.md)
-but replaces the variation operator (mutation, crossover) with calls to
-a large language model that proposes edits or rewrites of program
-candidates.
+Large Language Model (LLM) driven evolution keeps the population,
+selection, and evaluation loop of
+[Evolutionary Computation (EC)](../foundations/evolutionary-computation.md)
+but replaces the variation operator (mutation, crossover) with calls
+to an LLM that proposes edits or rewrites of program candidates.
 
 ## Intuition
 
 Classical evolutionary search over code suffers from a brutal variation
 problem. Random mutation of source code almost always produces broken
-programs; even targeted operators (subtree replacement in genetic
-programming) produce children that compile but rarely improve.
+programs; even targeted operators (subtree replacement in Genetic
+Programming, GP) produce children that compile but rarely improve.
 Crossover between programs is even worse because the semantics of two
 parents do not compose along syntactic boundaries.
 
@@ -89,8 +89,8 @@ respects semantics in a way that syntactic crossover cannot.
 The empirical payoff in the seed papers is dramatic. AlphaEvolve found
 a 4×4 complex matrix multiplication algorithm with 48 scalar
 multiplications, beating Strassen's 1969 algorithm in that setting.
-ShinkaEvolve found a state-of-the-art circle packing in 150 LLM
-samples, where prior LLM-driven approaches needed thousands.
+ShinkaEvolve found a State-Of-The-Art (SOTA) circle packing in 150
+LLM samples, where prior LLM-driven approaches needed thousands.
 
 ## Trade-offs and failure modes
 
@@ -120,12 +120,12 @@ samples, where prior LLM-driven approaches needed thousands.
   function evolved by a small LLM, millions of samples, single metric.
   Established the pattern.
 - **Eureka** (Ma et al. 2023) — LLM-driven evolution of reward
-  functions for RL.
+  functions for Reinforcement Learning.
 - **AlphaEvolve** ([papers/alphaevolve.md](../papers/alphaevolve.md)) —
   scaled-up successor to FunSearch: full files instead of single
-  functions, SOTA LLMs, hours-long evaluations, parallel infrastructure,
-  multiple metrics. Improved Strassen's algorithm and several open
-  math problems.
+  functions, SOTA LLMs, hours-long evaluations, parallel
+  infrastructure, multiple metrics. Improved Strassen's algorithm and
+  several open math problems.
 - **ShinkaEvolve** ([papers/shinkaevolve.md](../papers/shinkaevolve.md))
   — open-source reimplementation focused on sample efficiency:
   bandit-based LLM ensemble, novelty rejection sampling, weighted

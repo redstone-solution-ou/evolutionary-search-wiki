@@ -8,8 +8,8 @@ the algorithm chooses to focus on.
 
 ## Intuition
 
-Plain RL maximizes expected return. Plain minimax adversarial RL
-minimizes the worst-case return. Both rules push the system toward
+Plain Reinforcement Learning (RL) maximizes expected return. Plain
+minimax adversarial RL minimizes the worst-case return. Both rules push the system toward
 extremes — easy environments under maximization, impossible
 environments under minimax — that produce poor learning signal in
 opposite ways. Regret is the in-between rule: pick the environment
@@ -41,7 +41,8 @@ REGRET_PAIRED(π_P, π_A, θ) ≈ U_θ(π_A) - U_θ(π_P)
 
 The environment adversary's reward is `+REGRET`; the protagonist's
 reward is `-REGRET` (= raw return, after rearrangement); the
-antagonist's reward is `+REGRET`. The full PAIRED loop:
+antagonist's reward is `+REGRET`. The full Protagonist Antagonist
+Induced Regret Environment Design (PAIRED) loop:
 
 ```
 loop:
@@ -103,10 +104,10 @@ policy.
 - **PAIRED** ([papers/paired.md](../papers/paired.md)) — antagonist
   policy as the proxy oracle; learned adversary as the environment
   policy.
-- **PLR — Prioritized Level Replay** (Jiang et al. 2021) — no learned
+- **Prioritized Level Replay (PLR)** (Jiang et al. 2021) — no learned
   adversary; sample past levels with probability proportional to
-  estimated regret (TD-error or value-loss as proxy). Often
-  outperforms PAIRED on procedurally-generated benchmarks.
+  estimated regret (Temporal Difference error or value-loss as proxy).
+  Often outperforms PAIRED on procedurally-generated benchmarks.
 - **ACCEL** (Parker-Holder et al. 2022) — combine PLR's regret-based
   level selection with mutation-based level editing. The "evolutionary
   curriculum" branch of UED.

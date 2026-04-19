@@ -212,6 +212,15 @@ only `README.md` in the repo is the one at the root.
 
 ## Style rules
 
+- **Spell out acronyms on first use.** The first occurrence of any
+  acronym in a page must be written out in full with the acronym in
+  parentheses: "Quality Diversity (QD)", "Covariance Matrix Adaptation
+  Evolution Strategy (CMA-ES)", "NeuroEvolution of Augmenting
+  Topologies (NEAT)", etc. Subsequent occurrences use the short form.
+  This applies per page, not per wiki — each page re-introduces its
+  own acronyms so a reader landing on one page does not need to have
+  read another first. Rule of thumb: if a reader with only a general
+  ML background might not know what the letters stand for, expand.
 - **No emojis.** Anywhere.
 - **No fabricated numbers.** Every numeric claim cites a specific paper's
   table, figure, or section, or a public source with an access date.
@@ -292,6 +301,8 @@ Run when asked, or after a batch of ingests. A full lint pass checks:
   concept pages missing "Related wiki pages" or the cross-link minimum.
 - **Unlinked paper mentions** — `paired`, `mcc`, etc. that appear in
   prose without a relative link on first occurrence.
+- **Unexpanded acronyms** — any acronym whose first occurrence in a
+  page is not spelled out with the expansion in parentheses.
 - **Unattributed numbers** — grep for `%|×|x|hours|steps` in prose
   lines that don't contain `(...)` citations.
 - **Concept gaps** — terms that appear ≥3 times across pages but have

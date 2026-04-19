@@ -19,11 +19,12 @@ trajectories, suggesting MCC as a step toward genuinely open-ended
 algorithms.
 
 ## Key contributions
-- Introduces [minimal-criterion coevolution](../concepts/minimal-criterion.md)
-  as a new branch of [coevolution](../concepts/coevolution.md)
-  outside the traditional competitive / cooperative dichotomy: the
-  two populations are not rewarded based on each other's *success*,
-  only on whether the *interaction* satisfies a binary MC.
+- Introduces Minimal Criterion Coevolution (MCC; see
+  [minimal-criterion.md](../concepts/minimal-criterion.md)) as a new
+  branch of [coevolution](../concepts/coevolution.md) outside the
+  traditional competitive / cooperative dichotomy: the two
+  populations are not rewarded based on each other's *success*, only
+  on whether the *interaction* satisfies a binary MC.
 - Demonstrates the first (per the authors' knowledge) production of
   diverse functional artifacts in a single evolutionary run *without*
   a behavior characterization, novelty archive, or fitness ranking.
@@ -41,9 +42,11 @@ algorithms.
   motivations.
 
 ## Method at a glance
-Two queues — one of NEAT-evolved maze-navigating ANNs (capacity 250),
-one of evolved mazes (capacity 50). The agent MC: solve at least one
-maze in the current maze queue. The maze MC: be solvable by at least
+Two queues — one of NeuroEvolution of Augmenting Topologies
+(NEAT)-evolved maze-navigating Artificial Neural Networks (ANNs)
+(capacity 250), one of evolved mazes (capacity 50). The agent
+Minimal Criterion (MC): solve at least one maze in the current maze
+queue. The maze MC: be solvable by at least
 one agent in the current agent queue. Selection is by queue insertion
 order; reproduction by NEAT mutation (agents) or wall/passage
 mutation plus add-wall complexification (mazes). New offspring satisfying
@@ -57,8 +60,9 @@ MCC is the cleanest demonstration that
 achievable outside traditional alife worlds with a startlingly simple
 recipe: two coevolving populations, a binary minimal criterion, and
 genetics-based speciation. It is the methodological foil to both the
-novelty-search lineage (no BC, no archive) and the fitness-driven GA
-lineage (no fitness ranking). It is also the canonical reference for
+novelty-search lineage (no Behavior Characterization (BC), no
+archive) and the fitness-driven Genetic Algorithm (GA) lineage (no
+fitness ranking). It is also the canonical reference for
 the "MCC pattern" reused in later work, including modern adversarial
 environment generation and program-evolution systems.
 

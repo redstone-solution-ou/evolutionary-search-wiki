@@ -1,11 +1,12 @@
 # Evolutionary Computation
 
-Evolutionary computation (EC) is the umbrella term for population-based
+Evolutionary Computation (EC) is the umbrella term for population-based
 stochastic search algorithms inspired by biological evolution. It
-includes [genetic algorithms](genetic-algorithms.md) but is broader:
-evolution strategies (ES), genetic programming (GP), neuroevolution,
-estimation-of-distribution algorithms (EDAs), and the more recent
-hybrids with deep learning and large language models.
+includes Genetic Algorithms (GAs; see
+[genetic-algorithms.md](genetic-algorithms.md)) but is broader:
+Evolution Strategies (ES), Genetic Programming (GP), neuroevolution,
+Estimation-of-Distribution Algorithms (EDAs), and the more recent
+hybrids with deep learning and Large Language Models (LLMs).
 
 ## Intuition
 
@@ -23,20 +24,21 @@ The sub-fields are mostly defined by their representation:
 
 - **Genetic algorithms (GAs)** — fixed-length bitstrings or real vectors;
   see [genetic-algorithms.md](genetic-algorithms.md).
-- **Evolution strategies (ES)** — real-valued vectors with self-adaptive
-  Gaussian mutation; CMA-ES adapts the full covariance matrix and is
-  the strong default for continuous black-box optimization in moderate
+- **Evolution Strategies.** Real-valued vectors with self-adaptive
+  Gaussian mutation; the Covariance Matrix Adaptation Evolution
+  Strategy (CMA-ES) adapts the full covariance matrix and is the
+  strong default for continuous black-box optimization in moderate
   dimensions.
-- **Genetic programming (GP)** — variable-size tree-structured programs;
+- **Genetic Programming.** Variable-size tree-structured programs;
   the variation operator swaps subtrees.
-- **Neuroevolution** — evolving neural-network weights and/or
-  topologies; NEAT (NeuroEvolution of Augmenting Topologies, Stanley &
+- **Neuroevolution.** Evolving neural-network weights and/or
+  topologies; NeuroEvolution of Augmenting Topologies (NEAT; Stanley &
   Miikkulainen 2002) is the canonical method, growing networks from
   minimal structure by adding nodes and connections under historical
   marking.
-- **Estimation-of-distribution algorithms (EDAs)** — instead of
-  recombining individuals directly, fit a probabilistic model to the
-  population and sample from it.
+- **Estimation-of-Distribution Algorithms.** Instead of recombining
+  individuals directly, fit a probabilistic model to the population
+  and sample from it.
 
 ## Where coevolution sits
 
@@ -59,7 +61,7 @@ The wiki's two seed papers both belong here:
 
 ## The bridge to deep RL
 
-Modern reinforcement learning shares most of its problems with EC:
+Modern Reinforcement Learning (RL) shares most of its problems with EC:
 sample-efficient stochastic search over large parameter spaces with
 sparse, noisy reward. The two communities have converged in several
 places:
@@ -70,7 +72,7 @@ places:
 - **Neuroevolution for hard exploration.** Such et al. (2018) "Deep
   Neuroevolution" showed simple GAs can train deep networks competitively
   on Atari, especially on hard-exploration games.
-- **Population-based training (PBT).** A coevolution-flavored hybrid
+- **Population-Based Training (PBT).** A coevolution-flavored hybrid
   used to tune RL hyperparameters online.
 - **Adversarial environment generation.** [PAIRED](../papers/paired.md),
   POET, and ACCEL adopt the EC pattern of "second population shapes the

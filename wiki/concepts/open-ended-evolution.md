@@ -1,14 +1,14 @@
 # Open-Ended Evolution
 
-Open-ended evolution (OEE) is the goal of an algorithmic process that
+Open-Ended Evolution (OEE) is the goal of an algorithmic process that
 keeps producing new, interesting artifacts indefinitely, rather than
 converging to a fixed solution.
 
 ## Intuition
 
 Most optimization algorithms — including most
-[genetic algorithms](../foundations/genetic-algorithms.md) — are designed
-to *converge*. They start with a population, find the best individual,
+[Genetic Algorithms (GAs)](../foundations/genetic-algorithms.md) — are
+designed to *converge*. They start with a population, find the best individual,
 and stop. Open-ended evolution flips the goal: success is measured by
 the algorithm's ability to keep generating qualitatively new things,
 forever, without an external operator restarting it.

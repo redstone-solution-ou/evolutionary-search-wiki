@@ -1,9 +1,9 @@
 # Minimal Criterion
 
-A minimal criterion (MC) is a binary, non-ranked viability constraint
-used in place of a fitness function: an individual either satisfies the
-MC and is allowed to reproduce, or does not and is removed. There is
-no comparison between satisfying individuals.
+A Minimal Criterion (MC) is a binary, non-ranked viability constraint
+used in place of a fitness function: an individual either satisfies
+the MC and is allowed to reproduce, or does not and is removed. There
+is no comparison between satisfying individuals.
 
 ## Intuition
 
@@ -61,7 +61,7 @@ Three features distinguish this from a standard GA loop:
 Three intertwined reasons.
 
 **It avoids the "tricky art of crafting an objective function"** that
-viability evolution (Maesani et al. 2014) and earlier minimal-criterion
+Viability Evolution (ViE; Maesani et al. 2014) and earlier minimal-criterion
 work explicitly cite as a motivation. You only need to specify what
 counts as alive, not what counts as better.
 
@@ -98,10 +98,10 @@ implicitly. This is the engine behind MCC's
 
 ## Design choices in the literature
 
-- **Viability evolution (ViE)** (Mattiussi & Floreano 2003; Maesani et
+- **Viability Evolution** (Mattiussi & Floreano 2003; Maesani et
   al. 2014) — single-population MC with shrinking viability boundaries
   that *do* converge over time. The original MC method.
-- **Minimal criterion novelty search (MCNS)** (Lehman & Stanley 2010) —
+- **Minimal Criterion Novelty Search (MCNS)** (Lehman & Stanley 2010) —
   novelty search with an MC filter to prune useless lineages.
 - **Chromaria** (Soros & Stanley 2014) — alife world where the MC is
   satisfied through interaction with other organisms; the conceptual
@@ -117,7 +117,8 @@ implicitly. This is the engine behind MCC's
 - Can the MC itself coevolve with the populations, removing the last
   hand-engineered piece?
 - Does MC selection compose with gradient-based inner loops? All
-  published MC work uses neuroevolution; deep RL has not been tried.
+  published MC work uses neuroevolution; deep Reinforcement Learning
+  (RL) has not been tried.
 - Why does MCC need genetics-based speciation to maintain divergence
   across runs? The MC alone should be enough in principle.
 

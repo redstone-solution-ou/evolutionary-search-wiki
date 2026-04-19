@@ -81,6 +81,50 @@ host the LLM-as-mutation pattern. Cross-linked from
 [evolutionary-computation.md](foundations/evolutionary-computation.md)
 "bridge to LLMs" section.
 
+## [2026-04-19] sweep | Acronym first-use expansion + CLAUDE.md rule
+
+Applied a style sweep across all 22 wiki pages to expand acronyms on
+first use with the short form in parentheses — e.g. "Quality Diversity
+(QD)", "Covariance Matrix Adaptation Evolution Strategy (CMA-ES)",
+"NeuroEvolution of Augmenting Topologies (NEAT)", "Minimal Criterion
+(MC)", "Behavior Characterization (BC)", "Reinforcement Learning (RL)",
+"Large Language Model (LLM)", "Unsupervised Environment Design (UED)",
+"Proximal Policy Optimization (PPO)", "Underspecified Partially
+Observable Markov Decision Process (UPOMDP)", "Prioritized Level
+Replay (PLR)", "Domain Randomization (DR)", "Distributed Genetic
+Algorithm (DGA)", "Canonical serial Genetic Algorithm (CGA)", "Tensor
+Processing Unit (TPU)", "State-Of-The-Art (SOTA)", "Mixture-of-Experts
+(MoE)", "American Invitational Mathematics Examination (AIME)", and
+several more. Added the corresponding rule under "Style rules" in
+CLAUDE.md and a matching lint check under the lint workflow. All 375
+internal links re-verified to resolve.
+
+## [2026-04-19] ingest | foundation papers (9 PDFs, no leaves yet)
+
+Downloaded nine PDFs into `papers/foundations/` as supporting
+references for the existing leaves and for future ingests:
+
+- `neat_stanley-miikkulainen_2002.pdf` — NEAT, cited by MCC.
+- `novelty-search_lehman-stanley_2011.pdf` — "Abandoning Objectives",
+  cited by MCC and ShinkaEvolve.
+- `map-elites_mouret-clune_1504.04909.pdf` — MAP-Elites, the canonical
+  QD method.
+- `funsearch_romera-paredes_2024.pdf` — direct predecessor of
+  AlphaEvolve and ShinkaEvolve.
+- `poet_wang_1901.01753.pdf` — population-based coevolutionary
+  predecessor of PAIRED.
+- `plr_jiang_2010.03934.pdf` — Prioritized Level Replay; often
+  supersedes PAIRED in practice.
+- `cma-es-tutorial_hansen_1604.00772.pdf` — Hansen's CMA-ES tutorial,
+  the canonical modern EC reference.
+- `cma-me_fontaine_1912.02400.pdf` — CMA-ME, CMA-ES inside MAP-Elites.
+- `l-shade_tanabe-fukunaga_2014.pdf` — L-SHADE, the dominant
+  Differential Evolution variant on continuous benchmarks.
+
+These live alongside the existing leaves' PDFs but do not yet have
+dedicated wiki pages. Future ingests should promote them to leaves
+under the standard paper-leaf template.
+
 ## [2026-04-19] ingest | ShinkaEvolve (arXiv:2509.19349)
 
 Added Lange, Imajuku, Cetin, "ShinkaEvolve: Towards Open-Ended and

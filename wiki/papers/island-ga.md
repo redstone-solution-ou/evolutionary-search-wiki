@@ -17,13 +17,13 @@
 > and its tuning.
 
 ## Abstract
-Belding extends Tanese's 1989 work on the Distributed Genetic Algorithm
-(DGA), which divides a global population across processors that
-periodically exchange individuals via *migration*. Tanese showed
+Belding extends Tanese's 1989 work on the Distributed Genetic
+Algorithm (DGA), which divides a global population across processors
+that periodically exchange individuals via *migration*. Tanese showed
 near-linear speedup on a 64-processor hypercube and that the DGA
-outperformed the canonical serial GA (CGA) on a difficult class of
-randomly generated Walsh polynomials, but left open whether this held
-on more standard benchmarks. Belding evaluates the DGA on the Royal
+outperformed the Canonical serial Genetic Algorithm (CGA) on a
+difficult class of randomly generated Walsh polynomials, but left
+open whether this held on more standard benchmarks. Belding evaluates the DGA on the Royal
 Road functions and finds the DGA consistently outperforms the CGA on
 two of the four functions, with comparable performance on the other
 two; performance is sensitive to the migration interval and rate.

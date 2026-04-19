@@ -5,8 +5,8 @@
 **Authors:** Robert Tjarko Lange, Yuki Imajuku, Edoardo Cetin (Sakana AI)
 
 ## Abstract
-ShinkaEvolve is an open-source LLM-driven program-evolution framework
-designed for sample efficiency. Existing approaches (FunSearch,
+ShinkaEvolve is an open-source Large Language Model (LLM) driven
+program-evolution framework designed for sample efficiency. Existing approaches (FunSearch,
 AlphaEvolve, OpenEvolve) require thousands of LLM evaluations to find
 useful solutions; ShinkaEvolve introduces three innovations that
 substantially reduce this cost: (1) an adaptive parent-and-LLM
@@ -14,17 +14,20 @@ sampling scheme that balances exploration and exploitation via
 power-law and weighted sampling, (2) code novelty rejection-sampling
 based on embedding similarity plus an LLM-as-novelty-judge, and
 (3) a bandit-based LLM ensemble selection strategy that adapts to the
-evolving archive. ShinkaEvolve discovers a state-of-the-art circle
-packing in 150 samples, designs high-performing agentic harnesses for
-AIME mathematical reasoning, identifies improvements to ALE-Bench
-competitive programming solutions, and discovers novel mixture-of-
-experts load-balancing loss functions. Released under Apache 2.0.
+evolving archive. ShinkaEvolve discovers a State-Of-The-Art (SOTA)
+circle packing in 150 samples, designs high-performing agentic
+harnesses for the American Invitational Mathematics Examination
+(AIME) reasoning benchmark, identifies improvements to ALE-Bench
+(Algorithm & Logic Engineering Benchmark) competitive programming
+solutions, and discovers novel Mixture-of-Experts (MoE) load-
+balancing loss functions. Released under Apache 2.0.
 
 ## Key contributions
 - Three algorithmic innovations stacked on top of the
   [LLM-driven evolution](../concepts/llm-driven-evolution.md) recipe:
   power-law / weighted parent sampling, code-embedding novelty
-  rejection sampling, and bandit-based LLM ensemble selection.
+  rejection sampling, and multi-armed-bandit-based LLM ensemble
+  selection.
 - Empirical demonstration of an order-of-magnitude reduction in the
   number of LLM samples needed to reach state-of-the-art on multiple
   domains: 150 samples on circle packing, similarly low budgets on

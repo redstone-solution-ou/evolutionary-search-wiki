@@ -1,9 +1,10 @@
 # Unsupervised Environment Design
 
 Unsupervised Environment Design (UED) is the problem of automatically
-producing a useful distribution of environments to train an RL agent
-in, given only an *underspecified* environment with free parameters
-and no hand-designed difficulty curve.
+producing a useful distribution of environments to train a
+Reinforcement Learning (RL) agent in, given only an *underspecified*
+environment with free parameters and no hand-designed difficulty
+curve.
 
 ## Intuition
 
@@ -22,9 +23,9 @@ each existing approach corresponds to a known decision rule.
 
 | Approach | Environment policy | Decision rule |
 |---|---|---|
-| Domain randomization | uniform over Θ | insufficient reason (Laplace) |
+| Domain Randomization (DR) | uniform over Θ | insufficient reason (Laplace) |
 | Minimax adversarial | argmin over Θ of agent return | maximin (Wald) |
-| PAIRED | regret-maximizing Θ | minimax regret (Savage) |
+| Protagonist Antagonist Induced Regret Environment Design (PAIRED) | regret-maximizing Θ | minimax regret (Savage) |
 
 ## Mechanics
 
@@ -112,9 +113,10 @@ the protagonist plays the minimax regret policy.
   population-based predecessor of PAIRED.
 - **PAIRED** ([papers/paired.md](../papers/paired.md)) — the
   formalization plus the regret-based instantiation.
-- **PLR / Replay-Guided ACED** (Jiang et al. 2021) — drops the learned
-  adversary in favor of replaying high-regret levels from a buffer;
-  often more sample-efficient than PAIRED.
+- **Prioritized Level Replay (PLR) / Replay-Guided ACED** (Jiang et
+  al. 2021) — drops the learned adversary in favor of replaying
+  high-regret levels from a buffer; often more sample-efficient than
+  PAIRED.
 - **ACCEL** (Parker-Holder et al. 2022) — combines PLR with
   evolutionary editing of past levels to generate new ones.
 

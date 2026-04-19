@@ -5,24 +5,25 @@
 **Authors:** Michael Dennis, Natasha Jaques, Eugene Vinitsky et al. (UC Berkeley BAIR + Google Brain)
 
 ## Abstract
-A wide range of RL problems — robustness, transfer, unsupervised RL,
-emergent complexity — require specifying a distribution of training
-environments. The authors propose Unsupervised Environment Design (UED)
-as a paradigm: developers provide an *underspecified* environment with
-free parameters, and an algorithm produces a distribution over fully-
-specified, solvable environments tailored to the agent. They introduce
-PAIRED (Protagonist Antagonist Induced Regret Environment Design), in
-which an environment-generating adversary is allied with a second,
+A wide range of Reinforcement Learning (RL) problems — robustness,
+transfer, unsupervised RL, emergent complexity — require specifying a
+distribution of training environments. The authors propose
+Unsupervised Environment Design (UED) as a paradigm: developers
+provide an *underspecified* environment with free parameters, and an
+algorithm produces a distribution over fully-specified, solvable
+environments tailored to the agent. They introduce PAIRED
+(Protagonist Antagonist Induced Regret Environment Design), in which
+an environment-generating adversary is allied with a second,
 *antagonist* agent; the adversary is rewarded for the regret between
-protagonist and antagonist returns. Experiments on MiniGrid mazes show
-PAIRED produces a natural curriculum and yields agents with stronger
-zero-shot transfer than domain randomization or minimax adversarial
-training.
+protagonist and antagonist returns. Experiments on MiniGrid mazes
+show PAIRED produces a natural curriculum and yields agents with
+stronger zero-shot transfer than Domain Randomization (DR) or minimax
+adversarial training.
 
 ## Key contributions
 - Formalization of [Unsupervised Environment Design](../concepts/unsupervised-environment-design.md)
-  as a problem class, with the Underspecified POMDP (UPOMDP) as the
-  formal object (Section 3).
+  as a problem class, with the Underspecified Partially Observable
+  Markov Decision Process (UPOMDP) as the formal object (Section 3).
 - Identification of UED with classical decisions-under-ignorance:
   domain randomization ↔ insufficient reason, minimax ↔ Wald's
   maximin, PAIRED ↔ Savage's [minimax regret](../concepts/regret-as-objective.md).
@@ -45,8 +46,9 @@ environment parameters θ; the protagonist and antagonist each roll out
 in env(θ); the adversary's reward is the *difference* between the
 antagonist's best trajectory and the protagonist's mean trajectory
 return. The protagonist receives the negative of regret as its reward
-(equivalent to its own return, after rearrangement). All three learners
-are trained with PPO and share no parameters.
+(equivalent to its own return, after rearrangement). All three
+learners are trained with Proximal Policy Optimization (PPO) and
+share no parameters.
 
 ## Why it matters
 PAIRED gave UED a theoretical home in classical decision theory and a
@@ -96,7 +98,8 @@ Replay (PLR), ACCEL, and dual-curriculum design — the modern
   diagnostic tools to detect it during training.
 
 ## Follow-up work and dialogue
-The dominant follow-up is Prioritized Level Replay (PLR; Jiang et al.
+The dominant follow-up is Prioritized Level Replay
+([PLR](../../papers/foundations/plr_jiang_2010.03934.pdf); Jiang et al.
 2021), which drops the learned adversary in favor of a buffer that
 replays past high-regret levels. PLR is cheaper, often as good or
 better, and is the de facto baseline for procedurally-generated

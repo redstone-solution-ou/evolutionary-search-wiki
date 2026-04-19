@@ -1,9 +1,9 @@
 # Parallel and Distributed Genetic Algorithms
 
-A parallel or distributed GA splits the population across multiple
-processes or "islands" that evolve mostly independently, exchanging
-individuals at controlled intervals. The island model is the dominant
-coarse-grained variant.
+A parallel or distributed Genetic Algorithm (GA) splits the population
+across multiple processes or "islands" that evolve mostly
+independently, exchanging individuals at controlled intervals. The
+island model is the dominant coarse-grained variant.
 
 ## Intuition
 
@@ -108,9 +108,10 @@ performance is robust across many studies.
 
 ## Design choices in the literature
 
-- **Tanese 1989** (PhD dissertation; ICGA-89 papers) — introduced the
-  Distributed Genetic Algorithm (DGA) and demonstrated near-linear
-  speedup on a hypercube. The seminal reference.
+- **Tanese 1989** (PhD dissertation; International Conference on
+  Genetic Algorithms 1989, ICGA-89) — introduced the Distributed
+  Genetic Algorithm (DGA) and demonstrated near-linear speedup on a
+  hypercube. The seminal reference.
 - **Cohoon, Hegde, Martin, and Richards (1987)** — independent
   introduction of an island-style parallel GA, often cited alongside
   Tanese.

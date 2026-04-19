@@ -1,9 +1,9 @@
 # Knowledge Wiki — Evolutionary Search
 
 This wiki is a hand-curated knowledge graph about evolutionary search:
-classical genetic algorithms, coevolution, open-ended evolution,
-unsupervised environment design, and the modern thread of LLM-driven
-program evolution. It is organized general-to-specific: high-level
+classical genetic algorithms (GAs), coevolution, open-ended evolution,
+unsupervised environment design (UED), and the modern thread of
+large-language-model (LLM) driven program evolution. It is organized general-to-specific: high-level
 orientation pages sit at the top, cross-cutting concepts in the middle,
 and individual research papers form the leaves. Each page is short,
 links forward and backward, and ends with a list of related nodes so
