@@ -129,6 +129,36 @@ unexplained terms across the wiki:
 
 All 385 internal links verified to resolve.
 
+## [2026-04-19] ingest | AlphaZero (arXiv:1712.01815)
+
+Added Silver et al., *"Mastering Chess and Shogi by Self-Play with a
+General Reinforcement Learning Algorithm"*, DeepMind arXiv preprint
+2017, published in Science 2018 as *"A general reinforcement
+learning algorithm that masters chess, shogi, and Go through
+self-play"*. Created [papers/alphazero.md](papers/alphazero.md).
+Added the new "Self-play coevolution" lineage to
+[papers/papers.md](papers/papers.md) with AlphaZero as its sole
+current leaf. Cross-linked from
+[coevolution.md](concepts/coevolution.md) ("Papers that exemplify
+this" + the symmetric-self-play entry in "Design choices in the
+literature") and from
+[automatic-curriculum.md](concepts/automatic-curriculum.md) (added a
+new "Symmetric self-play" mechanism section alongside Adversarial /
+Selection-from-pool / Coevolutionary viability). Updated the slug
+list in [CLAUDE.md](../CLAUDE.md) and the scope paragraph in
+[../README.md](../README.md).
+
+## [2026-04-19] sweep | Full-title expansion for foundation-PDF citations
+
+Applied a pass to ensure that every citation of a foundation PDF in
+the wiki (those without a dedicated leaf) spells out the paper's
+full title in adjacent prose, per feedback that filenames alone
+(`poet_wang_1901.01753.pdf` etc.) are opaque to readers who do not
+already know the paper. Touched
+[concepts/cma-es.md](concepts/cma-es.md) ("Papers that exemplify
+this" block) and the foundation-paper block of this log, adding
+full titles, authors, and venues alongside the filenames.
+
 ## [2026-04-19] sweep | Acronym first-use expansion + CLAUDE.md rule
 
 Applied a style sweep across all 22 wiki pages to expand acronyms on
@@ -152,22 +182,39 @@ internal links re-verified to resolve.
 Downloaded nine PDFs into `papers/foundations/` as supporting
 references for the existing leaves and for future ingests:
 
-- `neat_stanley-miikkulainen_2002.pdf` — NEAT, cited by MCC.
-- `novelty-search_lehman-stanley_2011.pdf` — "Abandoning Objectives",
-  cited by MCC and ShinkaEvolve.
-- `map-elites_mouret-clune_1504.04909.pdf` — MAP-Elites, the canonical
-  QD method.
-- `funsearch_romera-paredes_2024.pdf` — direct predecessor of
+- *"Evolving Neural Networks through Augmenting Topologies"* —
+  Stanley & Miikkulainen, Evolutionary Computation 10(2), 2002.
+  `neat_stanley-miikkulainen_2002.pdf`. Cited by MCC.
+- *"Abandoning Objectives: Evolution Through the Search for Novelty
+  Alone"* — Lehman & Stanley, Evolutionary Computation 19(2), 2011.
+  `novelty-search_lehman-stanley_2011.pdf`. Cited by MCC and
+  ShinkaEvolve.
+- *"Illuminating search spaces by mapping elites"* — Mouret & Clune,
+  arXiv:1504.04909, 2015. `map-elites_mouret-clune_1504.04909.pdf`.
+  The canonical QD method.
+- *"Mathematical discoveries from program search with large language
+  models"* — Romera-Paredes et al., Nature 2024.
+  `funsearch_romera-paredes_2024.pdf`. Direct predecessor of
   AlphaEvolve and ShinkaEvolve.
-- `poet_wang_1901.01753.pdf` — population-based coevolutionary
-  predecessor of PAIRED.
-- `plr_jiang_2010.03934.pdf` — Prioritized Level Replay; often
+- *"Paired Open-Ended Trailblazer (POET): Endlessly Generating
+  Increasingly Complex and Diverse Learning Environments and Their
+  Solutions"* — Wang, Lehman, Clune & Stanley, ICML 2019,
+  arXiv:1901.01753. `poet_wang_1901.01753.pdf`. Population-based
+  coevolutionary predecessor of PAIRED.
+- *"Prioritized Level Replay"* — Jiang, Grefenstette & Rocktäschel,
+  ICML 2021, arXiv:2010.03934. `plr_jiang_2010.03934.pdf`. Often
   supersedes PAIRED in practice.
-- `cma-es-tutorial_hansen_1604.00772.pdf` — Hansen's CMA-ES tutorial,
-  the canonical modern EC reference.
-- `cma-me_fontaine_1912.02400.pdf` — CMA-ME, CMA-ES inside MAP-Elites.
-- `l-shade_tanabe-fukunaga_2014.pdf` — L-SHADE, the dominant
-  Differential Evolution variant on continuous benchmarks.
+- *"The CMA Evolution Strategy: A Tutorial"* — Hansen, arXiv:1604.00772,
+  2016. `cma-es-tutorial_hansen_1604.00772.pdf`. The canonical modern
+  EC reference.
+- *"Covariance Matrix Adaptation for the Rapid Illumination of
+  Behavior Space"* — Fontaine, Togelius, Nikolaidis & Hoover, GECCO
+  2020, arXiv:1912.02400. `cma-me_fontaine_1912.02400.pdf`. CMA-ES
+  inside MAP-Elites.
+- *"Improving the Search Performance of SHADE using Linear Population
+  Size Reduction"* — Tanabe & Fukunaga, IEEE CEC 2014.
+  `l-shade_tanabe-fukunaga_2014.pdf`. The dominant Differential
+  Evolution variant on continuous benchmarks.
 
 These live alongside the existing leaves' PDFs but do not yet have
 dedicated wiki pages. Future ingests should promote them to leaves

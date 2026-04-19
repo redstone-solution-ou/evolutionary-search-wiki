@@ -221,6 +221,16 @@ only `README.md` in the repo is the one at the root.
   own acronyms so a reader landing on one page does not need to have
   read another first. Rule of thumb: if a reader with only a general
   ML background might not know what the letters stand for, expand.
+- **Cite papers with full titles, not filenames.** Whenever a wiki
+  page references a paper by its local PDF path, the paper's full
+  title, authors, and year must appear in adjacent prose. File paths
+  like `papers/foundations/poet_wang_1901.01753.pdf` are opaque to a
+  reader; the filename is not a citation. Preferred form:
+  `*"Paper Title"* — Authors, Venue Year, arXiv:ID. Local: [PDF](path).`
+  Applies to foundation-reference PDFs (papers without dedicated
+  leaves) and to any ad-hoc PDF citation. For papers with a
+  dedicated leaf, link to the leaf instead — the leaf carries the
+  title.
 - **No emojis.** Anywhere.
 - **No fabricated numbers.** Every numeric claim cites a specific paper's
   table, figure, or section, or a public source with an access date.
@@ -332,10 +342,10 @@ Run when asked, or after a batch of ingests. A full lint pass checks:
 
 ## Canonical paper slugs (as of 2026-04)
 
-Five paper leaves exist. Use these slugs in all cross-links:
+Six paper leaves exist. Use these slugs in all cross-links:
 
 ```
-alphaevolve   island-ga   mcc   paired   shinkaevolve
+alphaevolve   alphazero   island-ga   mcc   paired   shinkaevolve
 ```
 
 When ingesting a new paper, pick a slug by lowercasing the model or

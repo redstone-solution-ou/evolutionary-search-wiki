@@ -107,8 +107,9 @@ a [minimal criterion](minimal-criterion.md).
 
 ## Design choices in the literature
 
-- **Symmetric self-play** (AlphaZero, OpenAI Five) — one population,
-  zero-sum game, MCTS or RL inside the loop.
+- **Symmetric self-play** ([AlphaZero](../papers/alphazero.md),
+  OpenAI Five) — one population, zero-sum game, Monte Carlo Tree
+  Search or RL inside the loop.
 - **Asymmetric two-population competition** — Hillis (1990) coevolved
   sorting networks against test cases; the modern descendant is
   adversarial-test coevolution in software testing.
@@ -147,9 +148,13 @@ a [minimal criterion](minimal-criterion.md).
 
 - [MCC](../papers/mcc.md) — dual-population coevolution of mazes and
   NEAT-evolved navigators under a binary minimal criterion.
-- [PAIRED](../papers/paired.md) — coevolution of an RL protagonist, an
-  RL antagonist, and a learned environment-generating adversary, with
-  regret as the shared objective.
+- [PAIRED](../papers/paired.md) — coevolution of an RL protagonist,
+  an RL antagonist, and a learned environment-generating adversary,
+  with regret as the shared objective.
+- [AlphaZero](../papers/alphazero.md) — symmetric self-play
+  coevolution at scale; MCTS-augmented policy iteration on game
+  self-play data; the cleanest demonstration that self-play alone
+  produces an automatic curriculum.
 
 ## Related wiki pages
 

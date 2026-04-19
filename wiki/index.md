@@ -66,6 +66,9 @@ within a section are sorted alphabetically.
 - [papers/alphaevolve.md](papers/alphaevolve.md) — Novikov et al.,
   Google DeepMind 2025. Scaled-up LLM-driven program evolution;
   improved Strassen's algorithm on 4×4 complex matrices.
+- [papers/alphazero.md](papers/alphazero.md) — Silver et al., DeepMind
+  2017/2018. Self-play coevolution at scale; mastered chess, shogi,
+  and Go from random play with a single algorithm.
 - [papers/island-ga.md](papers/island-ga.md) — Belding 1995, ICGA-95.
   Distributed/island GA on Royal Road benchmarks; with Tanese 1989
   and Whitley/Rana/Heckendorn 1998 cited as the seminal and

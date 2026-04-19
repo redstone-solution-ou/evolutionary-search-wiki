@@ -139,6 +139,7 @@ evolutionary-search-wiki
     +-- island-ga    (Belding 1995, ICGA / cites Tanese 1989, Whitley 1998)
     +-- mcc          (Brant & Stanley 2017, GECCO)
     +-- paired       (Dennis et al. 2020, NeurIPS)
+    +-- alphazero    (Silver et al. 2017/2018, Science)
     +-- alphaevolve  (Novikov et al. 2025, DeepMind)
     +-- shinkaevolve (Lange et al. 2025, Sakana AI)
 ```

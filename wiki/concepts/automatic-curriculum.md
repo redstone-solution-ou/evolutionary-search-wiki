@@ -64,8 +64,15 @@ loop:
 ```
 
 **Coevolutionary viability.** Two populations evolve under MC-style
-constraints; the difficulty curve is implicit in the changing viability
-region. MCC is the canonical example.
+constraints; the difficulty curve is implicit in the changing
+viability region. MCC is the canonical example.
+
+**Symmetric self-play.** A single policy plays against copies of
+itself. As the policy improves, its opponents improve in lockstep,
+so the difficulty naturally tracks current skill without any
+external schedule. [AlphaZero](../papers/alphazero.md) is the
+canonical modern example; this pattern also appears in AlphaStar,
+OpenAI Five, and most competitive game-AI systems.
 
 ```
 loop:

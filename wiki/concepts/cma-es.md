@@ -232,13 +232,20 @@ now the de facto default in continuous-domain QD.
 
 ## Papers that exemplify this
 
-- `cma-es-tutorial_hansen_1604.00772.pdf` (foundation reference) — the
-  canonical modern reference; full derivation of the rank-μ, rank-1,
-  and CSA updates.
-- `cma-me_fontaine_1912.02400.pdf` (foundation reference) — CMA-ME;
-  CMA-ES as an emitter inside MAP-Elites.
-- `map-elites_mouret-clune_1504.04909.pdf` (foundation reference) —
-  the base algorithm CMA-ME accelerates.
+- *"The CMA Evolution Strategy: A Tutorial"* — Nikolaus Hansen,
+  2016, arXiv:1604.00772. The canonical modern reference; full
+  derivation of the rank-μ, rank-1, and Cumulative Step-size
+  Adaptation (CSA) updates. Local:
+  [`papers/foundations/cma-es-tutorial_hansen_1604.00772.pdf`](../../papers/foundations/cma-es-tutorial_hansen_1604.00772.pdf).
+- *"Covariance Matrix Adaptation for the Rapid Illumination of
+  Behavior Space"* — Matthew C. Fontaine, Julian Togelius, Stefanos
+  Nikolaidis, Amy K. Hoover, GECCO 2020, arXiv:1912.02400. The
+  CMA-ME paper; CMA-ES as an emitter inside MAP-Elites. Local:
+  [`papers/foundations/cma-me_fontaine_1912.02400.pdf`](../../papers/foundations/cma-me_fontaine_1912.02400.pdf).
+- *"Illuminating search spaces by mapping elites"* — Jean-Baptiste
+  Mouret, Jeff Clune, 2015, arXiv:1504.04909. The base algorithm
+  CMA-ME accelerates. Local:
+  [`papers/foundations/map-elites_mouret-clune_1504.04909.pdf`](../../papers/foundations/map-elites_mouret-clune_1504.04909.pdf).
 - [ShinkaEvolve](../papers/shinkaevolve.md) — uses a
   bandit-based adaptation for the LLM ensemble selection, which can
   be read as a very distant relative of CMA-ES's

@@ -10,12 +10,23 @@ cross-paper synthesis, see the concept pages.
 | Slug | Title | Authors | Year | Venue | Lineage |
 |------|-------|---------|------|-------|---------|
 | [alphaevolve](alphaevolve.md) | AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery | Novikov, Vũ, Eisenberger et al. | 2025 | Google DeepMind white paper | LLM-driven program evolution |
+| [alphazero](alphazero.md) | Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm | Silver, Hubert, Schrittwieser et al. | 2017/2018 | arXiv / Science | self-play coevolution |
 | [island-ga](island-ga.md) | The Distributed Genetic Algorithm Revisited | Belding | 1995 | ICGA-95 | parallel / distributed GA |
 | [mcc](mcc.md) | Minimal Criterion Coevolution: A New Approach to Open-Ended Search | Brant, Stanley | 2017 | GECCO | neuroevolution / open-ended |
 | [paired](paired.md) | Emergent Complexity and Zero-shot Transfer via Unsupervised Environment Design | Dennis, Jaques, Vinitsky et al. | 2020 | NeurIPS | deep RL / UED |
 | [shinkaevolve](shinkaevolve.md) | ShinkaEvolve: Towards Open-Ended and Sample-Efficient Program Evolution | Lange, Imajuku, Cetin | 2025 | Sakana AI tech report | LLM-driven program evolution |
 
 ## Grouping by lineage
+
+**Self-play coevolution.** Papers where an agent coevolves against
+copies of itself, producing an automatic curriculum from the
+self-play dynamic. The cleanest and most widely-cited branch of
+coevolution in the modern deep-RL era.
+
+- [AlphaZero](alphazero.md) — Silver et al. 2017/2018. Neural
+  network plus Monte Carlo Tree Search, trained entirely from
+  self-play, single algorithm mastering chess, shogi, and Go from
+  random play.
 
 **Classical parallel evolutionary computation.** Papers that parallelize
 the canonical GA over subpopulations with periodic migration; the

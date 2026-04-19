@@ -58,9 +58,13 @@ The full set, in reading order:
 
 ## Scope (as of 2026-04)
 
-Version 0 of the wiki covers five seed papers that span the four
+Version 0 of the wiki covers six seed papers that span the five
 lineages the wiki is built around:
 
+- [AlphaZero](wiki/papers/alphazero.md) — Silver et al., DeepMind
+  Science 2018 — self-play coevolution at scale; single
+  algorithm mastering chess, shogi, and Go from random play;
+  canonical reference for self-play as automatic curriculum.
 - [Island GA](wiki/papers/island-ga.md) — Belding 1995 (ICGA),
   with Tanese 1989 and Whitley/Rana/Heckendorn 1998 cited as the
   seminal and theoretical references — the classical
@@ -81,10 +85,10 @@ lineages the wiki is built around:
   AlphaEvolve; power-law parent sampling, code novelty rejection, and
   bandit-based LLM ensemble selection.
 
-Together they outline the four main lineages — distributed GA,
+Together they outline the five main lineages — distributed GA,
 neuroevolutionary open-ended coevolution, deep-RL adversarial
-curricula, and LLM-driven program evolution — that the rest of the
-wiki is structured to grow into. Additions are welcome via pull
+curricula, self-play coevolution, and LLM-driven program evolution —
+that the rest of the wiki is structured to grow into. Additions are welcome via pull
 request; please follow the existing page layout and link conventions.
 
 ## Credits and license
