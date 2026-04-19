@@ -118,6 +118,15 @@ LLM samples, where prior LLM-driven approaches needed thousands.
 
 ## Design choices in the literature
 
+- **Non-LLM counterpart — [Grammatical Evolution](../papers/grammatical-evolution.md)**
+  (O'Neill & Ryan, IEEE Transactions on Evolutionary Computation
+  2001). The classical approach to evolving
+  grammar/schema-constrained structured outputs without any LLM:
+  genotype is an integer string, phenotype is grammar-decoded, and
+  the grammar guarantees syntactic validity. Complementary to the
+  LLM-driven approach below — GE guarantees validity via
+  hand-written grammar, LLM-driven methods via learned
+  distribution.
 - **Evolution through Large Models (ELM)** (Lehman, Gordon, Jain,
   Ndousse, Yeh & Stanley, GPTP 2022, arXiv:2206.08896) — the
   seminal "LLM as mutation operator" paper. Applied to evolving

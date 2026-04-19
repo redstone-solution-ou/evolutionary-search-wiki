@@ -11,6 +11,7 @@ cross-paper synthesis, see the concept pages.
 |------|-------|---------|------|-------|---------|
 | [alphaevolve](alphaevolve.md) | AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery | Novikov, Vũ, Eisenberger et al. | 2025 | Google DeepMind white paper | LLM-driven program evolution |
 | [alphazero](alphazero.md) | Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm | Silver, Hubert, Schrittwieser et al. | 2017/2018 | arXiv / Science | self-play coevolution |
+| [grammatical-evolution](grammatical-evolution.md) | Grammatical Evolution | O'Neill, Ryan | 2001 | IEEE Transactions on Evolutionary Computation 5(4) | grammar-constrained EA |
 | [island-ga](island-ga.md) | The Distributed Genetic Algorithm Revisited | Belding | 1995 | ICGA-95 | parallel / distributed GA |
 | [lmx](lmx.md) | Language Model Crossover: Variation through Few-Shot Prompting | Meyerson, Nelson, Bradley, Gaier, Moradi, Hoover, Lehman | 2023 / 2024 | arXiv / ACM TELO | LLM-driven evolution (foundational) |
 | [mcc](mcc.md) | Minimal Criterion Coevolution: A New Approach to Open-Ended Search | Brant, Stanley | 2017 | GECCO | neuroevolution / open-ended |
@@ -29,6 +30,20 @@ coevolution in the modern deep-RL era.
   network plus Monte Carlo Tree Search, trained entirely from
   self-play, single algorithm mastering chess, shogi, and Go from
   random play.
+
+**Grammar- / schema-constrained evolutionary search.** Papers that
+evolve candidates required to satisfy a formal grammar or schema —
+the non-LLM foundational approach to evolving structured outputs
+(programs, configurations, DSL expressions, JSON / YAML documents).
+
+- [Grammatical Evolution](grammatical-evolution.md) — O'Neill &
+  Ryan, IEEE TEC 2001. Genotype is a variable-length integer
+  string; phenotype is produced by decoding the genotype through a
+  user-supplied BNF grammar (or any other formal grammar, including
+  JSON Schema). Genetic operators act on the integer genome; the
+  grammar guarantees syntactic validity of every offspring. Serves
+  as the classical, non-LLM counterpart to LMX-style LLM-driven
+  variation over structured text.
 
 **Classical parallel evolutionary computation.** Papers that parallelize
 the canonical GA over subpopulations with periodic migration; the

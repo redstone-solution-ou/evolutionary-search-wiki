@@ -69,6 +69,11 @@ within a section are sorted alphabetically.
 - [papers/alphazero.md](papers/alphazero.md) — Silver et al., DeepMind
   2017/2018. Self-play coevolution at scale; mastered chess, shogi,
   and Go from random play with a single algorithm.
+- [papers/grammatical-evolution.md](papers/grammatical-evolution.md) —
+  O'Neill & Ryan, IEEE TEC 2001. Grammatical Evolution; classical
+  evolutionary framework for grammar/schema-constrained structured
+  outputs — the non-LLM foundational approach to evolving JSON
+  configs, DSL programs, etc.
 - [papers/island-ga.md](papers/island-ga.md) — Belding 1995, ICGA-95.
   Distributed/island GA on Royal Road benchmarks; with Tanese 1989
   and Whitley/Rana/Heckendorn 1998 cited as the seminal and

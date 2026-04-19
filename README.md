@@ -58,13 +58,18 @@ The full set, in reading order:
 
 ## Scope (as of 2026-04)
 
-Version 0 of the wiki covers eight seed papers that span the six
+Version 0 of the wiki covers nine seed papers that span the seven
 lineages the wiki is built around:
 
 - [AlphaZero](wiki/papers/alphazero.md) — Silver et al., DeepMind
   Science 2018 — self-play coevolution at scale; single
   algorithm mastering chess, shogi, and Go from random play;
   canonical reference for self-play as automatic curriculum.
+- [Grammatical Evolution](wiki/papers/grammatical-evolution.md) —
+  O'Neill & Ryan, IEEE TEC 2001 — canonical framework for
+  evolutionary search over grammar/schema-constrained structured
+  outputs (programs, configurations, JSON); the non-LLM
+  foundational reference for structured-genome EAs.
 - [Island GA](wiki/papers/island-ga.md) — Belding 1995 (ICGA),
   with Tanese 1989 and Whitley/Rana/Heckendorn 1998 cited as the
   seminal and theoretical references — the classical
@@ -95,11 +100,11 @@ lineages the wiki is built around:
   joint optimization with CMA-ES); the "evolve weights" counterpart
   to AlphaEvolve / ShinkaEvolve's "evolve code".
 
-Together they outline the six main lineages — distributed GA,
-neuroevolutionary open-ended coevolution, deep-RL adversarial
-curricula, self-play coevolution, LLM-driven program evolution, and
-evolutionary merging of trained weights — that the rest of the wiki
-is structured to grow into. Additions are welcome via pull
+Together they outline the seven main lineages — distributed GA,
+grammar/schema-constrained EA, neuroevolutionary open-ended
+coevolution, deep-RL adversarial curricula, self-play coevolution,
+LLM-driven program evolution, and evolutionary merging of trained
+weights — that the rest of the wiki is structured to grow into. Additions are welcome via pull
 request; please follow the existing page layout and link conventions.
 
 ## Credits and license

@@ -129,6 +129,28 @@ unexplained terms across the wiki:
 
 All 385 internal links verified to resolve.
 
+## [2026-04-19] ingest | Grammatical Evolution (O'Neill & Ryan, IEEE TEC 2001)
+
+Added O'Neill & Ryan, *"Grammatical Evolution"*, IEEE Transactions
+on Evolutionary Computation 5(4):349-358, 2001. Created
+[papers/grammatical-evolution.md](papers/grammatical-evolution.md).
+The canonical non-LLM framework for evolutionary search over
+structured outputs constrained by a formal grammar — including
+JSON-schema-constrained configurations, DSL programs, and any
+other grammar-definable structured representation. Genotype =
+variable-length integer string; phenotype = grammar-decoded
+structured output; genetic operators act on the genotype; grammar
+guarantees syntactic validity of every offspring.
+
+Added new lineage grouping "Grammar- / schema-constrained
+evolutionary search" to [papers/papers.md](papers/papers.md) with
+this paper as its current sole leaf. Cross-linked from
+[llm-driven-evolution.md](concepts/llm-driven-evolution.md) as the
+non-LLM counterpart to [LMX](papers/lmx.md) — both aim at syntactic
+validity of structured offspring, GE via hand-written grammar, LMX
+via learned LLM distribution; complementary rather than competing.
+Updated slug list in [CLAUDE.md](../CLAUDE.md) (nine slugs now).
+
 ## [2026-04-19] ingest | LMX — Language Model Crossover (arXiv:2302.12170)
 
 Added Meyerson, Nelson, Bradley, Gaier, Moradi, Hoover & Lehman,
