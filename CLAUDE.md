@@ -212,15 +212,20 @@ only `README.md` in the repo is the one at the root.
 
 ## Style rules
 
-- **Spell out acronyms on first use.** The first occurrence of any
-  acronym in a page must be written out in full with the acronym in
-  parentheses: "Quality Diversity (QD)", "Covariance Matrix Adaptation
-  Evolution Strategy (CMA-ES)", "NeuroEvolution of Augmenting
-  Topologies (NEAT)", etc. Subsequent occurrences use the short form.
-  This applies per page, not per wiki — each page re-introduces its
-  own acronyms so a reader landing on one page does not need to have
-  read another first. Rule of thumb: if a reader with only a general
-  ML background might not know what the letters stand for, expand.
+- **Avoid acronyms where natural prose works.** Prefer the full
+  phrase (`"genetic algorithm"`, `"reinforcement learning"`,
+  `"large language model"`, `"quality diversity"`, `"minimal
+  criterion"`) over the acronym (`"GA"`, `"RL"`, `"LLM"`, `"QD"`,
+  `"MC"`). The wiki reads better and is more accessible to readers
+  outside the immediate specialty. Exceptions are limited to:
+  (a) proper names of specific algorithms or systems where the
+  acronym *is* the established name in the literature — `NEAT`,
+  `PAIRED`, `MCC`, `POET`, `ACCEL`, `CMA-ES`, `MAP-Elites`, etc.
+  (these are titles, not abbreviations, and should be used as such);
+  (b) places where repeating the full phrase would make the text
+  unreadable (very long compound names used many times in one
+  paragraph). When an acronym is used outside those exceptions, it
+  must still be expanded on first use per page.
 - **Cite papers with full titles, not filenames.** Whenever a wiki
   page references a paper by its local PDF path, the paper's full
   title, authors, and year must appear in adjacent prose. File paths
@@ -336,7 +341,16 @@ Run when asked, or after a batch of ingests. A full lint pass checks:
 - Do not commit auto-generated helper scripts (put them in `/tmp/`).
 - Do not touch `.obsidian/` or `.DS_Store` (gitignored).
 - Do not amend an already-pushed commit.
-- Do not commit directly to `main`. Use feature branches and PRs.
+- Do not commit directly to `main`. Use feature branches and pull
+  requests. **Each novelty is its own short-lived branch, merged as
+  soon as it is complete** — do not accumulate many independent
+  novelties on one branch and merge them later in a single batch.
+  The correct flow is: create branch, make one focused change (one
+  ingest, one concept page, one sweep, one lint pass), commit, merge
+  to `main`, delete the branch, start the next branch. A branch
+  that has stayed open across multiple unrelated novelties is a
+  process violation and should be split into its actual novelties
+  before merge.
 - Do not skip log entries for non-trivial changes. The log is how
   future sessions understand what happened.
 
