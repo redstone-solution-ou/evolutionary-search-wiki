@@ -98,18 +98,21 @@ than NEAT mutation.
 
 ## Design choices in the literature
 
-- **Alife worlds.** Tierra (Ray 1991), Avida (Ofria & Wilke 2004),
-  Chromaria (Soros & Stanley 2014) — embed the search inside a richer
-  environment with implicit interactions.
+- **Artificial-life (alife) worlds.** Tierra (Ray 1991), Avida (Ofria
+  & Wilke 2004), Chromaria (Soros & Stanley 2014) — embed the search
+  inside a richer simulated environment where organisms interact;
+  Chromaria in particular uses an interaction-based minimal
+  criterion, the direct conceptual ancestor of MCC's approach.
 - **Quality diversity.** [Novelty search](novelty-and-quality-diversity.md),
   NSLC, MAP-Elites — explicit divergence pressure with optional
   quality term.
 - **Minimal criterion coevolution.** [MCC](../papers/mcc.md) — drift
   plus binary MC plus coevolutionary coupling; no behavior
   characterization, no archive.
-- **Adversarial environment generation.** POET and successors — keep an
-  archive of (agent, environment) pairs and let it grow; transfer
-  agents across environments.
+- **Adversarial environment generation.** Paired Open-Ended
+  Trailblazer (POET) and successors — keep an archive of (agent,
+  environment) pairs and let it grow; transfer agents across
+  environments.
 - **LLM-driven open-ended program search.**
   [ShinkaEvolve](../papers/shinkaevolve.md) — explicit aim of being
   "open-ended" in the program-synthesis setting; uses

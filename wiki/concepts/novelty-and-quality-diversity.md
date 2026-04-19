@@ -103,6 +103,12 @@ of BC is deeply load-bearing.
   one elite per cell. Now the dominant QD method in robotics.
 - **CVT-MAP-Elites** — Voronoi tessellation in continuous behavior
   spaces.
+- **Covariance Matrix Adaptation MAP-Elites (CMA-ME)** (Fontaine et
+  al. 2020) — replaces MAP-Elites' isotropic Gaussian mutation with
+  [CMA-ES](cma-es.md)-style adaptive Gaussian emitters, redefining
+  "success" for the covariance update to include cell-filling and
+  elite-improvement. The dedicated CMA-ES page walks through the
+  covariance update mechanics.
 - **MCC** ([papers/mcc.md](../papers/mcc.md)) — explicitly frames
   itself against this lineage: keep the divergence-preserving spirit
   but drop the BC, the archive, and the explicit novelty score.

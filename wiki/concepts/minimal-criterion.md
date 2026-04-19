@@ -103,9 +103,13 @@ implicitly. This is the engine behind MCC's
   that *do* converge over time. The original MC method.
 - **Minimal Criterion Novelty Search (MCNS)** (Lehman & Stanley 2010) —
   novelty search with an MC filter to prune useless lineages.
-- **Chromaria** (Soros & Stanley 2014) — alife world where the MC is
-  satisfied through interaction with other organisms; the conceptual
-  ancestor of MCC.
+- **Chromaria** (Soros & Stanley 2014) — an artificial-life world in
+  which "organisms" are color-pattern-producing neural networks that
+  move and plant their colors on a shared canvas; the MC is satisfied
+  by interaction with other organisms (your plant must be reachable
+  by at least one peer). Chromaria is the conceptual ancestor of MCC
+  — Brant & Stanley explicitly generalize it from its alife world to
+  a standalone coevolutionary algorithm.
 - **MCC** ([papers/mcc.md](../papers/mcc.md)) — drops the shrinking
   viability boundary and the novelty signal entirely; uses only a fixed
   binary MC plus dual-population coevolution.

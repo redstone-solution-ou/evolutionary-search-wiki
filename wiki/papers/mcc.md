@@ -110,11 +110,11 @@ environment generation and program-evolution systems.
 The direct successor is Brant & Stanley's "Benchmarking open-endedness
 in minimal criterion coevolution" (GECCO 2019), which proposes
 quantitative open-endedness metrics specifically for the MCC dynamics.
-The conceptual lineage flows forward into POET (Wang et al. 2019),
-which can be read as MCC reframed for deep RL — though POET keeps
-explicit fitness thresholds where MCC drops them — and into
-[PAIRED](./paired.md), which replaces MCC's binary MC with regret as
-the adversary's signal. Both ShinkaEvolve and OpenAI / Sakana lines of
+The conceptual lineage flows forward into Paired Open-Ended
+Trailblazer (POET; Wang et al. 2019), which can be read as MCC
+reframed for deep RL — though POET keeps explicit fitness thresholds
+where MCC drops them — and into [PAIRED](./paired.md), which
+replaces MCC's binary MC with regret as the adversary's signal. Both ShinkaEvolve and OpenAI / Sakana lines of
 work cite the open-ended-evolution agenda this paper helped seed; see
 [ShinkaEvolve](./shinkaevolve.md) for the modern LLM-era inheritor of
 the open-ended-search framing.

@@ -81,6 +81,54 @@ host the LLM-as-mutation pattern. Cross-linked from
 [evolutionary-computation.md](foundations/evolutionary-computation.md)
 "bridge to LLMs" section.
 
+## [2026-04-19] query-filed-back | CMA-ES covariance update, PCA analogy, CMA-ME
+
+Chat conversation on "what is the covariance matrix in CMA-ES / CMA-ME
+— is it a PCA over all the population?" was non-trivial and surfaced a
+gap: the wiki had no dedicated page on CMA-ES and the CMA-ME treatment
+lived in a single bullet inside novelty-and-quality-diversity.md.
+Filed back as the new concept page
+[cma-es.md](concepts/cma-es.md), covering the sampling distribution
+`Normal(m, σ²C)`, the rank-μ (PCA-like, weighted-over-top-μ
+offspring) and rank-1 (evolution-path / EMA) covariance updates, the
+CSA step-size rule, the explicit PCA-vs-CMA-ES comparison table, and
+the CMA-ME reuse pattern (same update math, redefined "success"
+signal to include cell-filling and elite-improvement). Cross-linked
+from [concepts.md](concepts/concepts.md),
+[index.md](index.md),
+[evolutionary-computation.md](foundations/evolutionary-computation.md),
+and
+[novelty-and-quality-diversity.md](concepts/novelty-and-quality-diversity.md).
+
+## [2026-04-19] lint | Clarity pass — acronym expansion + jargon glosses
+
+Systematic pass for reader clarity. Added first-occurrence acronym
+expansions and one-line glosses for the most-repeated previously
+unexplained terms across the wiki:
+
+- Paired Open-Ended Trailblazer (POET) expanded in `coevolution.md`,
+  `automatic-curriculum.md`, `open-ended-evolution.md`,
+  `evolutionary-computation.md`, `mcc.md`, `paired.md`,
+  `unsupervised-environment-design.md`.
+- Adversarially Compounding Complexity by Editing Levels (ACCEL)
+  expanded in `unsupervised-environment-design.md`,
+  `automatic-curriculum.md`, `coevolution.md`,
+  `evolutionary-computation.md`, `paired.md`.
+- Prioritized Level Replay (PLR) expanded consistently across
+  `paired.md`, `regret-as-objective.md`,
+  `unsupervised-environment-design.md`,
+  `automatic-curriculum.md`.
+- Added a one-line gloss for Strassen's algorithm in `alphaevolve.md`
+  and `llm-driven-evolution.md`.
+- Added a one-line gloss for Royal Road functions in
+  `island-ga.md`.
+- Expanded Chromaria from bare name to a full gloss in
+  `open-ended-evolution.md` and `minimal-criterion.md`.
+- Expanded FunSearch with domain context (cap sets, Nature venue) in
+  `alphaevolve.md`, `shinkaevolve.md`, `llm-driven-evolution.md`.
+
+All 385 internal links verified to resolve.
+
 ## [2026-04-19] sweep | Acronym first-use expansion + CLAUDE.md rule
 
 Applied a style sweep across all 22 wiki pages to expand acronyms on

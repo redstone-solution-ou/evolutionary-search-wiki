@@ -122,10 +122,12 @@ a [minimal criterion](minimal-criterion.md).
   — adversary's reward is the gap between protagonist and antagonist;
   by construction, the adversary is incentivized to produce *solvable*
   hard environments rather than impossible ones.
-- **Coevolutionary curricula in deep RL** — POET (Wang et al. 2019),
-  Enhanced POET (Wang et al. 2020), ACCEL (Parker-Holder et al. 2022)
-  all coevolve agents and environments in some form. Most of these
-  reuse the [open-ended evolution](open-ended-evolution.md) framing
+- **Coevolutionary curricula in deep RL** — Paired Open-Ended
+  Trailblazer (POET; Wang et al. 2019), Enhanced POET (Wang et
+  al. 2020), and Adversarially Compounding Complexity by Editing
+  Levels (ACCEL; Parker-Holder et al. 2022) all coevolve agents and
+  environments in some form. Most of these reuse the
+  [open-ended evolution](open-ended-evolution.md) framing
   popularized by the neuroevolution community.
 
 ## Open questions

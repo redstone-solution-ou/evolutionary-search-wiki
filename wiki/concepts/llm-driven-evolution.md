@@ -88,7 +88,9 @@ respects semantics in a way that syntactic crossover cannot.
 
 The empirical payoff in the seed papers is dramatic. AlphaEvolve found
 a 4×4 complex matrix multiplication algorithm with 48 scalar
-multiplications, beating Strassen's 1969 algorithm in that setting.
+multiplications, beating Strassen's 1969 algorithm in that setting
+(Strassen's 1969 result was the first sub-cubic matrix-multiplication
+method, famous for breaking the naive `O(n³)` barrier).
 ShinkaEvolve found a State-Of-The-Art (SOTA) circle packing in 150
 LLM samples, where prior LLM-driven approaches needed thousands.
 
@@ -116,9 +118,10 @@ LLM samples, where prior LLM-driven approaches needed thousands.
 
 ## Design choices in the literature
 
-- **FunSearch** (Romera-Paredes et al. 2024) — the precursor: a single
-  function evolved by a small LLM, millions of samples, single metric.
-  Established the pattern.
+- **FunSearch** (Romera-Paredes et al. 2024, Nature) — the precursor:
+  a single function evolved by a small LLM, millions of samples,
+  single metric. Established the pattern; famously discovered new
+  cap-set constructions in extremal combinatorics.
 - **Eureka** (Ma et al. 2023) — LLM-driven evolution of reward
   functions for Reinforcement Learning.
 - **AlphaEvolve** ([papers/alphaevolve.md](../papers/alphaevolve.md)) —

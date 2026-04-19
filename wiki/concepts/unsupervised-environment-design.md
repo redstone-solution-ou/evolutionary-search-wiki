@@ -107,18 +107,19 @@ the protagonist plays the minimax regret policy.
   parameters uniformly. The "no UED" baseline.
 - **Minimax adversarial training** (Pinto et al. 2017 and others) — an
   adversary minimizes the protagonist's return. Predates UED framing.
-- **POET** (Wang et al. 2019, 2020) — a population of (agent,
-  environment) pairs evolved together; agents transfer between
-  environments under a manually-tuned reward threshold. POET is a
-  population-based predecessor of PAIRED.
+- **Paired Open-Ended Trailblazer (POET)** (Wang et al. 2019, 2020) —
+  a population of (agent, environment) pairs evolved together; agents
+  transfer between environments under a manually-tuned reward
+  threshold. POET is a population-based predecessor of PAIRED.
 - **PAIRED** ([papers/paired.md](../papers/paired.md)) — the
   formalization plus the regret-based instantiation.
 - **Prioritized Level Replay (PLR) / Replay-Guided ACED** (Jiang et
   al. 2021) — drops the learned adversary in favor of replaying
   high-regret levels from a buffer; often more sample-efficient than
   PAIRED.
-- **ACCEL** (Parker-Holder et al. 2022) — combines PLR with
-  evolutionary editing of past levels to generate new ones.
+- **Adversarially Compounding Complexity by Editing Levels (ACCEL)**
+  (Parker-Holder et al. 2022) — combines PLR with evolutionary
+  editing of past levels to generate new ones.
 
 ## Open questions
 

@@ -30,8 +30,12 @@ two; performance is sensitive to the migration interval and rate.
 
 ## Key contributions
 - Empirical confirmation that the DGA outperforms the CGA on
-  non-pathological benchmarks (Royal Road functions 3 and 4), not just
-  on Tanese's specifically-constructed Walsh polynomials.
+  non-pathological benchmarks — specifically the Royal Road functions
+  (Mitchell et al. 1992; Forrest & Mitchell 1993), a family of
+  bitstring fitness landscapes with explicitly built-in schema
+  structure designed to stress-test GAs' building-block-hypothesis
+  claims — on functions 3 and 4, not just on Tanese's
+  specifically-constructed Walsh polynomials.
 - Systematic exploration of migration interval and rate, identifying
   ~1% subpopulation per generation as a sweet spot (e.g., 20% migrating
   every 20 generations).

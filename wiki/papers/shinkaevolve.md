@@ -6,9 +6,10 @@
 
 ## Abstract
 ShinkaEvolve is an open-source Large Language Model (LLM) driven
-program-evolution framework designed for sample efficiency. Existing approaches (FunSearch,
-AlphaEvolve, OpenEvolve) require thousands of LLM evaluations to find
-useful solutions; ShinkaEvolve introduces three innovations that
+program-evolution framework designed for sample efficiency. Existing approaches (FunSearch — Romera-Paredes et al. 2024, the
+Nature paper that introduced the pattern; AlphaEvolve; OpenEvolve,
+an open reimplementation) require thousands of LLM evaluations to
+find useful solutions; ShinkaEvolve introduces three innovations that
 substantially reduce this cost: (1) an adaptive parent-and-LLM
 sampling scheme that balances exploration and exploitation via
 power-law and weighted sampling, (2) code novelty rejection-sampling

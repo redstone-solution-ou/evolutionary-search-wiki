@@ -16,7 +16,10 @@ runtime, and the matrix-multiplication kernels used to train LLMs.
 Applied to open mathematical and algorithmic problems, it found a
 4×4 complex matrix multiplication scheme using 48 scalar
 multiplications — the first improvement in 56 years over Strassen's
-1969 algorithm in that setting — and improved state-of-the-art
+1969 algorithm in that setting (Strassen's algorithm was the first
+sub-cubic matrix multiplication method, reducing 2×2 multiplication
+from 8 to 7 scalar multiplications and famously setting off the
+line of work on fast matrix multiplication) — and improved state-of-the-art
 constructions on ~20% of more than 50 open problems including the
 Erdős Minimum Overlap Problem and 11-dimensional Kissing Numbers.
 
@@ -107,8 +110,10 @@ evolution work lacked.
 
 ## Follow-up work and dialogue
 AlphaEvolve sits in the middle of a fast-moving line of work. The
-direct precursor is FunSearch (Romera-Paredes et al. 2024) — single-
-function evolution with a small LLM and millions of samples. The most
+direct precursor is FunSearch (Romera-Paredes et al. 2024, Nature) —
+single-function Python evolution with a small LLM and millions of
+samples, the first system to demonstrate LLM-driven discovery of
+new mathematical constructions (cap sets in finite geometry). The most
 significant successor is [ShinkaEvolve](./shinkaevolve.md) (Sakana AI,
 2025), which positions itself as the open-source, sample-efficient
 counterpart and demonstrates state-of-the-art results on circle packing

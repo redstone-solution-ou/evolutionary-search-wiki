@@ -118,15 +118,17 @@ is plausible.
   learning approach: weight examples by predicted difficulty.
 - **Teacher-student curriculum** (Matiisen et al. 2019) — explicit
   teacher policy chooses tasks for a student RL agent.
-- **POET** (Wang et al. 2019) — population of (agent, environment)
-  pairs; environments mutate, agents transfer; difficulty thresholds
-  are hand-tuned but the schedule emerges from the population dynamics.
+- **Paired Open-Ended Trailblazer (POET)** (Wang et al. 2019) —
+  population of (agent, environment) pairs; environments mutate,
+  agents transfer; difficulty thresholds are hand-tuned but the
+  schedule emerges from the population dynamics.
 - **PAIRED** ([papers/paired.md](../papers/paired.md)) — regret-driven
   adversary; difficulty schedule fully implicit.
 - **PLR** (Jiang et al. 2021) — prioritized replay of high-regret
   past levels; cheaper than PAIRED, often as good or better.
-- **ACCEL** (Parker-Holder et al. 2022) — PLR plus mutation-based
-  level editing; a hybrid of evolutionary and replay-based curricula.
+- **Adversarially Compounding Complexity by Editing Levels (ACCEL)**
+  (Parker-Holder et al. 2022) — PLR plus mutation-based level
+  editing; a hybrid of evolutionary and replay-based curricula.
 - **MCC** ([papers/mcc.md](../papers/mcc.md)) — fully implicit
   curriculum from coevolutionary viability under a minimal criterion;
   no explicit difficulty signal.

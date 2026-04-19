@@ -88,9 +88,10 @@ policy.
   protagonist on some Θ — turning the regret signal into noise. PAIRED's
   Appendix E.1 explores variants that relax this.
 - **Three-policy training cost.** Three RL learners is more expensive
-  than one. PLR (Jiang et al. 2021) showed that replaying past
-  high-regret levels from a buffer can replace the learned adversary
-  while preserving most of the benefit, at lower cost.
+  than one. Prioritized Level Replay (PLR; Jiang et al. 2021) showed
+  that replaying past high-regret levels from a buffer can replace
+  the learned adversary while preserving most of the benefit, at
+  lower cost.
 - **Regret estimation noise.** Both `U_θ(π_A)` and `U_θ(π_P)` are
   Monte Carlo estimates. The regret signal has variance proportional to
   both. Multi-rollout averaging helps but not arbitrarily.

@@ -26,9 +26,9 @@ The sub-fields are mostly defined by their representation:
   see [genetic-algorithms.md](genetic-algorithms.md).
 - **Evolution Strategies.** Real-valued vectors with self-adaptive
   Gaussian mutation; the Covariance Matrix Adaptation Evolution
-  Strategy (CMA-ES) adapts the full covariance matrix and is the
-  strong default for continuous black-box optimization in moderate
-  dimensions.
+  Strategy ([CMA-ES](../concepts/cma-es.md)) adapts the full
+  covariance matrix and is the strong default for continuous
+  black-box optimization in moderate dimensions.
 - **Genetic Programming.** Variable-size tree-structured programs;
   the variation operator swaps subtrees.
 - **Neuroevolution.** Evolving neural-network weights and/or
@@ -75,8 +75,10 @@ places:
 - **Population-Based Training (PBT).** A coevolution-flavored hybrid
   used to tune RL hyperparameters online.
 - **Adversarial environment generation.** [PAIRED](../papers/paired.md),
-  POET, and ACCEL adopt the EC pattern of "second population shapes the
-  first" inside an RL training loop.
+  the Paired Open-Ended Trailblazer (POET), and Adversarially
+  Compounding Complexity by Editing Levels (ACCEL) adopt the EC
+  pattern of "second population shapes the first" inside an RL
+  training loop.
 
 ## The bridge to LLMs
 

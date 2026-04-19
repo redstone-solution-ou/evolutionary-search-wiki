@@ -99,17 +99,22 @@ Replay (PLR), ACCEL, and dual-curriculum design — the modern
 
 ## Follow-up work and dialogue
 The dominant follow-up is Prioritized Level Replay
-([PLR](../../papers/foundations/plr_jiang_2010.03934.pdf); Jiang et al.
-2021), which drops the learned adversary in favor of a buffer that
-replays past high-regret levels. PLR is cheaper, often as good or
-better, and is the de facto baseline for procedurally-generated
-benchmarks. ACCEL (Parker-Holder et al. 2022) combines PLR with
-mutation-based level editing — bringing PAIRED's adversary back as an
-*evolutionary* level generator rather than an RL one. Dual Curriculum
-Design (Jiang et al. 2021) generalizes the PAIRED game to two
-curricula running simultaneously. POET (Wang et al. 2019; Enhanced
-POET 2020) is the population-based predecessor that PAIRED's Section 2
-explicitly contrasts itself with. On the conceptual side, PAIRED is
+([PLR](../../papers/foundations/plr_jiang_2010.03934.pdf); Jiang et
+al. 2021) — no learned adversary, just a buffer that prioritises
+replay of past levels proportional to estimated regret. PLR is
+cheaper, often as good or better, and is the de facto baseline for
+procedurally-generated benchmarks. Adversarially Compounding
+Complexity by Editing Levels (ACCEL; Parker-Holder et al. 2022)
+combines PLR with mutation-based level editing — bringing PAIRED's
+adversary back as an *evolutionary* level generator rather than an
+RL one. Dual Curriculum Design (Jiang et al. 2021) generalizes the
+PAIRED game to two curricula running simultaneously. Paired
+Open-Ended Trailblazer (POET; Wang et al. 2019; Enhanced POET 2020)
+is the population-based predecessor that PAIRED's Section 2
+explicitly contrasts itself with — POET maintains an archive of
+(agent, environment) pairs that transfer across environments under
+a hand-tuned reward threshold, where PAIRED replaces both the
+population and the threshold with a single learned adversary. On the conceptual side, PAIRED is
 often paired with [MCC](./mcc.md) as the two endpoints of the
 "second population drives complexity" idea — PAIRED in deep RL with
 explicit regret, MCC in neuroevolution with a binary
