@@ -324,3 +324,46 @@ canonical example alongside AlphaEvolve),
 re-implemented on top of code embeddings), and
 [open-ended-evolution.md](concepts/open-ended-evolution.md)
 (explicit framing in the title).
+
+## [2026-04-24] lint + restructure | Narrative entry pass
+
+Combined lint pass and a readability-driven restructure of the entry
+experience. Lint side: re-verified all 538 internal links resolve,
+all 10 paper leaves and 10 concept pages are template-compliant,
+zero orphans, zero pages with weak (≤1) inbound connectivity.
+Foundation page `evolutionary-computation.md` does not strictly
+follow the concept-page template (no `Mechanics` / `Why it works` /
+`Trade-offs and failure modes` sections) but reads well as a
+narrative umbrella page; left intact rather than forced into the
+template.
+
+Restructure side: the user feedback was that landing on the wiki
+felt like reading an index rather than learning. Rewrote the four
+entry-experience pages so a reader can walk top-to-bottom without
+following a single link and come away with the shape of the field.
+
+- [overview.md](overview.md) — rewritten as a single linear
+  narrative organised around the four "modifications of the
+  canonical loop" (distribute the population; drop the fixed
+  objective; couple two populations; replace the variation
+  operator). Each lineage is one section that names the canonical
+  paper and the concept inline. Reading paths and knowledge-graph
+  sketch retained, but moved to the end as reference rather than
+  presented as the structure of the page.
+- [foundations/foundations.md](foundations/foundations.md) —
+  rewritten as a chapter introduction explaining why the canonical
+  loop matters as the substrate every later page modifies, with the
+  page list moved below the narrative.
+- [concepts/concepts.md](concepts/concepts.md) — rewritten as a
+  walk through the four families of design choices (what gets
+  selected, how populations are coupled, how variation is performed,
+  how the population is structured), with each concept page
+  motivated by which family it belongs to.
+- [papers/papers.md](papers/papers.md) — rewritten so each lineage
+  group leads with a paragraph explaining what the lineage *adds*
+  rather than just listing leaves; the alphabetical index table
+  moved to the end as a quick-lookup reference.
+
+The leaf pages and individual concept pages were not modified —
+they are already narrative-quality on their own and serve as
+reference cards once a reader has the entry-level framing.
