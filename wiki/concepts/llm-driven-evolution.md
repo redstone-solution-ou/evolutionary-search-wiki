@@ -148,6 +148,17 @@ LLM samples, where prior LLM-driven approaches needed thousands.
   class-block level; treats Python classes as the genome unit.
 - **Eureka** (Ma et al. 2023) — LLM-driven evolution of reward
   functions for Reinforcement Learning.
+- **[Promptbreeder](../papers/promptbreeder.md)** (Fernando, Banarse,
+  Michalewski, Osindero & Rocktäschel, Google DeepMind 2023 / ICML
+  2024) — applies the LLM-as-mutator pattern to *prompts* rather than
+  programs, and adds a self-referential layer in which the
+  mutation-prompts are themselves under evolutionary selection (via a
+  hyper-mutation operator that mutates `M` with `LLM(H + M)`). Evolves
+  (task-prompt, mutation-prompt) pairs with binary-tournament
+  selection on PaLM 2-L; reaches 83.9% zero-shot on GSM8K with the
+  evolved task-prompt `"SOLUTION:"`. The most explicit instantiation
+  of "LLM as the variation operator" outside the program-evolution
+  setting.
 - **AlphaEvolve** ([papers/alphaevolve.md](../papers/alphaevolve.md)) —
   scaled-up successor to FunSearch: full files instead of single
   functions, SOTA LLMs, hours-long evaluations, parallel
