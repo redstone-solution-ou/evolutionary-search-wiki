@@ -87,8 +87,13 @@ this file first.
 ### 1. Paper leaf — `wiki/papers/<slug>.md`
 
 One per paper. Slug is the lowercase hyphen-separated short name
-(`paired`, `mcc`, `poet`, `accel`). Target length 600–1000 words,
-dense, no padding.
+(`paired`, `mcc`, `poet`, `accel`). Target length 600–1200 words,
+dense, no padding. **A leaf is a faithful technical mirror of the paper's
+substantive content** — every design rationale the paper itself motivates
+(in §body, appendix, or figure caption) belongs on the leaf, not just the
+component inventory. If you find yourself bouncing to a concept page to
+answer "*why* does this paper's component X exist?", the leaf has a gap
+and must be fixed.
 
 ```markdown
 # <Full Paper Title>
@@ -105,8 +110,19 @@ dense, no padding.
 - bullet
 
 ## Method at a glance
-(2-4 sentences: algorithm family, what populations / agents are involved,
-training signal, the central mechanism)
+(One short paragraph — algorithm family, what populations / agents are
+involved, training signal, the central mechanism, AND the rationale
+behind each non-trivial design choice the paper itself motivates. If
+the paper devotes a paragraph, appendix section, or figure caption to
+justifying a component — choice of selection operator, mutation rate,
+role of a coevolutionary partner, why this curriculum, why this archive
+structure, why this regret estimator, why this LLM-as-mutator prompt —
+mirror that rationale here. Inventory without rationale is not enough;
+the leaf is a technical mirror of the paper's substantive design, not a
+parts list. If a single design choice carries multi-paragraph
+justification in the paper, promote it to its own H3 subsection inside
+this section, e.g. `### How <method> prevents premature convergence` or
+`### Why <method> uses minimal-criterion coevolution`.)
 
 ## Why it matters
 (2-3 sentences on what this paper moved forward)
@@ -324,6 +340,14 @@ Run when asked, or after a batch of ingests. A full lint pass checks:
   no dedicated concept or foundation page. Propose a new page.
 - **Contradictions** — claims that disagree across pages. Flag in the
   lint report even if you can't resolve them.
+- **Design-rationale gaps in leaves** — for each paper leaf, check
+  whether the paper's body or appendix devotes space to motivating
+  a design choice (choice of selection operator, mutation rate,
+  coevolutionary partner role, curriculum design, archive structure,
+  regret estimator, LLM-as-mutator prompt) that the leaf merely
+  *names* without *explaining*. Flag leaves that fail the test "a
+  reader of this leaf alone can answer *why* component X is there."
+  Treat each gap as a fix-on-sight task.
 - Append `## [YYYY-MM-DD] lint | <summary>` to `wiki/log.md` with
   counts and links to the fixes.
 
@@ -333,11 +357,25 @@ Run when asked, or after a batch of ingests. A full lint pass checks:
 - Do not add emojis.
 - Do not create marketing-tone prose.
 - Do not duplicate content across pages; cross-link instead.
+- Do not write a paper leaf that omits a design rationale the paper
+  itself motivates. If the paper has a paragraph, appendix section,
+  or figure caption explaining WHY a component is there (choice of
+  selection operator, mutation rate, role of a coevolutionary partner,
+  why this curriculum, why this archive structure, why this regret
+  estimator, why this LLM-as-mutator prompt), that rationale must
+  appear on the leaf — not just the inventory. Test: a reader of the
+  leaf alone should be able to answer "*why* does this paper's
+  component X exist?" without bouncing to the concept page or the PDF.
 - Do not write to `papers/` — the raw source layer is immutable.
 - Do not use absolute URLs for internal wiki navigation.
 - Do not leave a page without a "Related wiki pages" block.
-- Do not edit `llm-wiki.md`; it is the reference copy of the generic
-  pattern. Schema changes go in this file (`CLAUDE.md`).
+- Do not edit `llm-wiki.md` as part of routine ingest, query-filed-back,
+  or lint work; it is the reference copy of the generic pattern.
+  Schema changes that are project-specific go in this file (`CLAUDE.md`).
+  Structural clarifications to the *generic* pattern itself (something
+  true of any LLM-built wiki, not just this one) may go into
+  `llm-wiki.md` only with explicit user direction, and should be logged
+  with a `schema` op in `wiki/log.md`.
 - Do not commit auto-generated helper scripts (put them in `/tmp/`).
 - Do not touch `.obsidian/` or `.DS_Store` (gitignored).
 - Do not amend an already-pushed commit.

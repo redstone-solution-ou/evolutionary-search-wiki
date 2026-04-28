@@ -367,3 +367,61 @@ following a single link and come away with the shape of the field.
 The leaf pages and individual concept pages were not modified —
 they are already narrative-quality on their own and serve as
 reference cards once a reader has the entry-level framing.
+
+## [2026-04-28] schema | leaf-as-mirror rule + design-rationale lint check (propagated from ts-forecasting-wiki)
+
+Adopted the same schema rule that was introduced in
+ts-forecasting-wiki today. Triggered by a request to keep the three
+sibling wikis (this one, ts-forecasting-wiki, kg-rag-wiki) in sync on
+the leaf-as-mirror principle.
+
+Schema changes in [`CLAUDE.md`](../CLAUDE.md):
+
+- **Paper-leaf preamble** — added the principle: "A leaf is a
+  faithful technical mirror of the paper's substantive content."
+  Bumped target length 600–1000 → 600–1200 to leave room for design
+  rationale on papers that motivate it heavily.
+- **`## Method at a glance` template** — rewritten from
+  "2-4 sentences: algorithm family, populations, training signal,
+  central mechanism" to "one short paragraph that includes the
+  rationale behind each non-trivial design choice the paper itself
+  motivates," with EC-specific examples (selection operator, mutation
+  rate, coevolutionary partner, curriculum, archive structure, regret
+  estimator, LLM-as-mutator prompt) and a recommendation to promote a
+  single load-bearing rationale to its own H3 subsection (e.g.
+  `### How <method> prevents premature convergence`).
+- **Anti-patterns** — added: "Do not write a paper leaf that omits
+  a design rationale the paper itself motivates," with the same
+  discoverable test as ts-forecasting-wiki.
+- **Lint workflow** — added "Design-rationale gaps in leaves" as a
+  new checklist item.
+- **`llm-wiki.md` editing rule** — relaxed from blanket "do not
+  edit" to "do not edit as part of routine work," allowing
+  structural clarifications to the generic pattern *with explicit
+  user direction* and a `schema` op log entry. This brings the
+  guard rail in line with ts-forecasting-wiki and kg-rag-wiki.
+
+Generic-pattern propagation in [`llm-wiki.md`](../llm-wiki.md):
+
+- Added a new "leaf is a faithful mirror" convention in
+  §Architecture, just before §Operations. This is the generic
+  principle, applicable to any LLM-built wiki where leaves describe
+  substantive sources; the same paragraph was added simultaneously
+  to ts-forecasting-wiki and kg-rag-wiki.
+
+No paper leaves were lint-fixed in this pass — the rule is
+prospective for new ingests and existing leaves will be checked in a
+follow-up lint pass as the corpus grows past the current 10 leaves.
+
+Scope notes:
+
+- This wiki currently has 10 paper leaves (`alphaevolve`,
+  `alphazero`, `grammatical-evolution`, `island-ga`, `lmx`, `mcc`,
+  `model-merging`, `paired`, `plr`, `shinkaevolve`). Spot-check
+  candidates for rationale gaps when a future lint pass runs:
+  `paired` (regret-as-objective), `mcc` (minimal-criterion
+  rationale), `shinkaevolve` (LLM-as-mutator prompt + selection
+  rationale), `plr` (level-replay scoring rationale), `island-ga`
+  (migration topology + interval rationale).
+- The change is purely schematic; no behavioural change to the
+  existing wiki content.
