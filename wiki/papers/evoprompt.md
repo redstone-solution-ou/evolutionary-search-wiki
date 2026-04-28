@@ -68,6 +68,6 @@ Cite EvoPrompt as the canonical reference for *general-purpose* LLM-driven discr
 
 ## In the knowledge graph
 
-- **Related concepts:** [llm-driven-evolution](../concepts/llm-driven-evolution.md) (EvoPrompt instantiates the LLM-as-variation-operator pattern with explicit GA and DE algorithm choices), [parallel-and-distributed-ga](../concepts/parallel-and-distributed-ga.md) (the GA selection-and-population machinery EvoPrompt borrows from).
+- **Related concepts:** [evolutionary-prompt-optimization](../concepts/evolutionary-prompt-optimization.md) (EvoPrompt is the canonical reference for the GA/DE-flavoured LLM-as-mutator subpattern), [llm-driven-evolution](../concepts/llm-driven-evolution.md) (EvoPrompt instantiates the LLM-as-variation-operator pattern with explicit GA and DE algorithm choices), [parallel-and-distributed-ga](../concepts/parallel-and-distributed-ga.md) (the GA selection-and-population machinery EvoPrompt borrows from).
 - **Foundations:** [evolutionary-computation](../foundations/evolutionary-computation.md), [genetic-algorithms](../foundations/genetic-algorithms.md) (EvoPrompt is a direct port of the classical GA/DE templates with LLM substitution for variation).
 - **See also:** [Promptbreeder](promptbreeder.md) (concurrent self-referential cousin on a closed model), [EPPO](eppo.md) (the inverse pattern: classical EA + LLM-as-fitness-oracle), [LMX](lmx.md) (the foundational "LLM-as-variation-operator" reference EvoPrompt cites for legitimacy).

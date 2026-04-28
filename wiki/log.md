@@ -557,3 +557,48 @@ scheduled branch in this autonomous run — the lineage now has the
 critical mass of three papers required to motivate a dedicated
 concept page rather than relying on the inverted-pattern note in
 `llm-driven-evolution.md`.
+
+## [2026-04-29] concept | evolutionary-prompt-optimization
+
+Created [concepts/evolutionary-prompt-optimization.md](concepts/evolutionary-prompt-optimization.md)
+as the cross-cutting concept page for evolutionary search over the
+prompt handed to a fixed LLM at inference time. The page motivates the
+two complementary subpatterns now visible in the wiki — classical-EA +
+LLM-as-fitness-oracle ([EPPO](papers/eppo.md)) and LLM-as-mutator
+([Promptbreeder](papers/promptbreeder.md),
+[EvoPrompt](papers/evoprompt.md)) — and presents them with shared
+mechanics, a side-by-side trade-off table, and a unified set of
+open questions. Cross-references three exemplar leaves under *Papers
+that exemplify this*.
+
+Wired into the existing knowledge graph:
+
+- Added a new paragraph to the *"How variation is performed"* family
+  in [concepts/concepts.md](concepts/concepts.md) introducing the
+  prompt-evolution thread alongside the existing
+  [llm-driven-evolution](concepts/llm-driven-evolution.md) paragraph;
+  added an entry to the *Pages in this section* alphabetical list.
+- Added the new concept to the *Related concepts* line in each of the
+  three exemplar leaves' *In the knowledge graph* blocks
+  ([eppo](papers/eppo.md), [promptbreeder](papers/promptbreeder.md),
+  [evoprompt](papers/evoprompt.md)).
+- Added a back-link from
+  [concepts/llm-driven-evolution.md](concepts/llm-driven-evolution.md)
+  in its *Related wiki pages* section, framing the relationship as
+  "the prompt-flavoured sibling concept; the LLM-as-mutator subpattern
+  there overlaps with the program-evolution work catalogued on this
+  page."
+- Updated [index.md](index.md) with a new *Concepts* entry.
+
+The concept page satisfies the schema's cross-link minimum — three
+papers exemplifying it (EPPO, Promptbreeder, EvoPrompt), two concept
+pages cross-linked (`llm-driven-evolution`,
+`novelty-and-quality-diversity`, `parallel-and-distributed-ga`) and
+two foundation pages (`evolutionary-computation`,
+`genetic-algorithms`).
+
+This closes out the autonomous run that began with the EPPO ingest:
+in order, four PRs landed on `main` — EPPO leaf (PR #3), Promptbreeder
+leaf (PR #4), EvoPrompt leaf (PR #5), and this concept page. Each on
+its own short-lived feature branch per the CLAUDE.md "one focused
+change per branch" rule.
