@@ -105,6 +105,19 @@ foundationally [LMX](../papers/lmx.md) (Meyerson et al. 2023) for the
 and [ShinkaEvolve](../papers/shinkaevolve.md) for scaled
 program-evolution systems.
 
+[Evolutionary prompt optimization](evolutionary-prompt-optimization.md)
+is the same idea pointed at a different artifact. Instead of evolving
+the *program* the LLM generates, evolve the *prompt* the LLM consumes.
+Two complementary subpatterns coexist: classical discrete EAs over an
+integer-index genome with the LLM held outside the loop as the fitness
+oracle ([EPPO](../papers/eppo.md), with an information-theoretic
+generalization bound from comparison-only feedback), and LLM-as-
+mutator over natural-language genomes
+([Promptbreeder](../papers/promptbreeder.md),
+[EvoPrompt](../papers/evoprompt.md)) — the latter Promptbreeder
+adding a self-referential layer in which the *mutation-prompts*
+themselves are under evolutionary selection.
+
 [CMA-ES](cma-es.md) — Covariance Matrix Adaptation Evolution Strategy
 — is the orthogonal continuous-domain variation operator: a
 multivariate-Gaussian sampler whose mean, step size, and full
@@ -149,6 +162,10 @@ sample the design space one page at a time.
   operator inside CMA-ME and Model Merging.
 - [coevolution.md](coevolution.md) — two (or more) populations whose
   fitness depends on each other.
+- [evolutionary-prompt-optimization.md](evolutionary-prompt-optimization.md) —
+  evolutionary search over the prompt handed to a fixed LLM at
+  inference time; classical-EA + LLM-as-fitness-oracle (EPPO) and
+  LLM-as-mutator (Promptbreeder, EvoPrompt) subpatterns.
 - [llm-driven-evolution.md](llm-driven-evolution.md) — the EC loop
   with an LLM as the variation operator.
 - [minimal-criterion.md](minimal-criterion.md) — a binary, non-ranked

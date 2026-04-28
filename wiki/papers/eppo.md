@@ -69,6 +69,6 @@ Cite EPPO as the canonical reference for *task-level evolutionary few-shot examp
 
 ## In the knowledge graph
 
-- **Related concepts:** [llm-driven-evolution](../concepts/llm-driven-evolution.md) (the inverted pattern: LLM as evaluator rather than mutator), [parallel-and-distributed-ga](../concepts/parallel-and-distributed-ga.md) (the broader discrete-EA family from which Discrete (1+1)-ES descends).
+- **Related concepts:** [evolutionary-prompt-optimization](../concepts/evolutionary-prompt-optimization.md) (the cross-cutting concept EPPO instantiates with the classical-EA + LLM-as-fitness-oracle subpattern), [llm-driven-evolution](../concepts/llm-driven-evolution.md) (the inverted pattern: LLM as evaluator rather than mutator), [parallel-and-distributed-ga](../concepts/parallel-and-distributed-ga.md) (the broader discrete-EA family from which Discrete (1+1)-ES descends).
 - **Foundations:** [evolutionary-computation](../foundations/evolutionary-computation.md), [genetic-algorithms](../foundations/genetic-algorithms.md).
 - **See also:** [LMX](lmx.md) (LLM-as-crossover, the methodological inverse), [AlphaEvolve](alphaevolve.md) (LLM-as-mutator at scale), [ShinkaEvolve](shinkaevolve.md) (sample-efficient LLM-as-mutator), [Grammatical Evolution](grammatical-evolution.md) (the classical discrete-EA-on-text pattern with a hand-written grammar).

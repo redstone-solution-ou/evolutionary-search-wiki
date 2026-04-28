@@ -37,6 +37,10 @@ within a section are sorted alphabetically.
 - [concepts/coevolution.md](concepts/coevolution.md) — the central
   organizing idea: two (or more) populations whose fitness depends on
   each other.
+- [concepts/evolutionary-prompt-optimization.md](concepts/evolutionary-prompt-optimization.md) —
+  evolutionary search over the prompt handed to a fixed LLM at
+  inference time; classical-EA + LLM-as-fitness-oracle (EPPO) and
+  LLM-as-mutator (Promptbreeder, EvoPrompt) subpatterns.
 - [concepts/llm-driven-evolution.md](concepts/llm-driven-evolution.md) —
   EA loop with an LLM as the mutation operator; AlphaEvolve and
   ShinkaEvolve are the canonical examples.

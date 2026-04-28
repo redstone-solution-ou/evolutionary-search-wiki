@@ -248,6 +248,12 @@ LLM samples, where prior LLM-driven approaches needed thousands.
 
 ## Related wiki pages
 
+- [evolutionary-prompt-optimization.md](evolutionary-prompt-optimization.md) —
+  the prompt-flavoured sibling concept; the LLM-as-mutator subpattern
+  there overlaps with the program-evolution work catalogued on this
+  page (Promptbreeder and EvoPrompt instantiate the same LLM-as-
+  variation-operator idea on prompts that AlphaEvolve and ShinkaEvolve
+  instantiate on programs).
 - [../foundations/genetic-algorithms.md](../foundations/genetic-algorithms.md)
 - [../foundations/evolutionary-computation.md](../foundations/evolutionary-computation.md)
 - [parallel-and-distributed-ga.md](parallel-and-distributed-ga.md)
