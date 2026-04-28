@@ -175,6 +175,20 @@ LLM samples, where prior LLM-driven approaches needed thousands.
   merging-coefficient search. Relevant as a separate branch of
   "evolutionary search over neural networks" that sidesteps the need
   for gradient-based training per offspring.
+- **EPPO — Evolutionary Pre-Prompt Optimization**
+  ([eppo](../papers/eppo.md); Videau, Leite, Schoenauer & Teytaud, 2024
+  / 2026) — the *methodological inverse* of every system listed above.
+  Where AlphaEvolve, ShinkaEvolve and LMX put the LLM *inside* the
+  search loop as the variation operator and use an external evaluator
+  to score candidate programs, EPPO puts the LLM *outside* the loop as
+  the fitness oracle and uses a classical comparison-based discrete EA
+  (Discrete (1+1)-ES, Portfolio, DiscLengler from Nevergrad) to evolve
+  a length-s integer-index genome over a fixed demonstration pool.
+  Listed here for the contrast: the "LLM as mutator" assumption is a
+  design choice, not a definition of LLM-related evolutionary search,
+  and the comparison-only feedback signal in EPPO underwrites a
+  generalization bound (`κ^b · δ_{1,ε}`) that LLM-as-mutator pipelines
+  cannot claim because they consume absolute fitness values.
 
 ## Open questions
 

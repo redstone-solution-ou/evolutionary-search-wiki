@@ -425,3 +425,44 @@ Scope notes:
   (migration topology + interval rationale).
 - The change is purely schematic; no behavioural change to the
   existing wiki content.
+
+## [2026-04-28] ingest | EPPO (Videau, Leite, Schoenauer, Teytaud, arXiv:2412.04291)
+
+Added Mathurin Videau, Alessandro Leite, Marc Schoenauer & Olivier
+Teytaud, *"Evolutionary Pre-Prompt Optimization for Mathematical
+Reasoning"*, 2024 preprint / 2026 v2. EPPO frames task-level few-shot
+Chain-of-Thought prompt design as a discrete combinatorial
+optimization problem: encode a pre-prompt as a length-s integer array
+indexing a curated demonstration pool, and search the index space with
+a Nevergrad comparison-based EA (Discrete (1+1)-ES, Portfolio,
+DiscLengler, …). The paper proves an information-theoretic
+generalization-risk bound `Pr(|L̂(r) − L(r)| > ε) ≤ κ^b · δ_{1,ε}`
+that depends only on optimizer feedback arity κ and budget b, and
+demonstrates LLaMA2-70B exact-match gains exceeding 10 absolute points
+on GSM8k and MathQA over standard CoT, additive with self-consistency.
+
+Created [papers/eppo.md](papers/eppo.md) following the leaf-as-mirror
+schema introduced earlier today; the load-bearing
+comparison-based-feedback rationale is promoted to its own H3
+subsection (`### How comparison-based feedback bounds the
+generalization risk`) inside *Method at a glance*. Opened a new
+lineage section *"Evolutionary search over LLM prompts"* in
+[papers/papers.md](papers/papers.md), positioned between
+*LLM-driven program evolution* and *Evolutionary merging of trained
+weights*; added EPPO to the alphabetical index. Cross-linked the
+inverted-pattern relationship (LLM as fitness oracle vs LLM as
+mutator) into [concepts/llm-driven-evolution.md](concepts/llm-driven-evolution.md)
+under *Design choices in the literature*. Updated
+[index.md](index.md) and the canonical-slug list in
+[../CLAUDE.md](../CLAUDE.md).
+
+Eleven paper leaves now (`alphaevolve`, `alphazero`, `eppo`,
+`grammatical-evolution`, `island-ga`, `lmx`, `mcc`, `model-merging`,
+`paired`, `plr`, `shinkaevolve`).
+
+Concept-page deferral: a dedicated `evolutionary-prompt-optimization`
+concept page is a candidate once a second paper in this lineage is
+ingested (Promptbreeder, Fernando et al. ICML 2024, is the obvious
+companion; Videau et al.'s own *Evolutionary Retrofitting*
+(arXiv:2410.11330) is another). For now the inverted-pattern note in
+`llm-driven-evolution.md` carries the cross-cutting framing.
