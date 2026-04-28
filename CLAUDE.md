@@ -394,10 +394,10 @@ Run when asked, or after a batch of ingests. A full lint pass checks:
 
 ## Canonical paper slugs (as of 2026-04)
 
-Ten paper leaves exist. Use these slugs in all cross-links:
+Eleven paper leaves exist. Use these slugs in all cross-links:
 
 ```
-alphaevolve   alphazero   grammatical-evolution   island-ga   lmx   mcc   model-merging   paired   plr   shinkaevolve
+alphaevolve   alphazero   eppo   grammatical-evolution   island-ga   lmx   mcc   model-merging   paired   plr   shinkaevolve
 ```
 
 When ingesting a new paper, pick a slug by lowercasing the model or

@@ -170,6 +170,34 @@ random mutation could not achieve on programs.
   samples rather than thousands. Cites Tanese 1989 directly for its
   island structure.
 
+## Evolutionary search over LLM prompts
+
+The methodological mirror of the LLM-driven-program-evolution thread
+above. There the LLM is *inside* the search loop as the variation
+operator and an external evaluator scores each candidate program; here
+the LLM is *outside* the search loop as the fitness oracle, and a
+classical discrete evolutionary algorithm is the variation operator.
+The genome is no longer source code but a list of integer indices into
+a curated pool of demonstrations. The motivation is theoretical as much
+as empirical: comparison-based feedback bounds the size of the
+effective hypothesis class via simple union-bound information-theoretic
+arguments, giving certifiable generalization guarantees that
+gradient-based fine-tuning and per-example retrieval cannot offer.
+
+- [EPPO](eppo.md) — *"Evolutionary Pre-Prompt Optimization for
+  Mathematical Reasoning"*, Videau, Leite, Schoenauer & Teytaud, 2024
+  preprint / 2026 v2. Encodes a few-shot Chain-of-Thought pre-prompt as
+  a length-s integer array indexing a demonstration pool, optimizes it
+  with a Nevergrad comparison-based EA (Discrete (1+1)-ES, Portfolio,
+  DiscLengler, …), and proves a `Pr(|L̂(r) − L(r)| > ε) ≤ κ^b · δ_{1,ε}`
+  generalization-risk bound that depends only on the optimizer feedback
+  arity κ and budget b — not on the LLM's capacity, the ambient
+  pre-prompt space `|D|^s`, or the few-shot size s. Empirically
+  improves LLaMA2-70B exact-match by more than 10 points on GSM8k and
+  MathQA over standard CoT, with gains additive on top of
+  self-consistency, while keeping the compute footprint well below
+  fine-tuning.
+
 ## Evolutionary merging of trained weights
 
 A complementary thread to the LLM-driven *code* evolution above.
@@ -203,6 +231,7 @@ tag for quick lookup:
 |------|-------|---------|------|-------|---------|
 | [alphaevolve](alphaevolve.md) | AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery | Novikov, Vũ, Eisenberger et al. | 2025 | Google DeepMind white paper | LLM-driven program evolution |
 | [alphazero](alphazero.md) | Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm | Silver, Hubert, Schrittwieser et al. | 2017 / 2018 | arXiv / Science | self-play coevolution |
+| [eppo](eppo.md) | Evolutionary Pre-Prompt Optimization for Mathematical Reasoning | Videau, Leite, Schoenauer, Teytaud | 2024 / 2026 | arXiv preprint | evolutionary search over LLM prompts |
 | [grammatical-evolution](grammatical-evolution.md) | Grammatical Evolution | O'Neill, Ryan | 2001 | IEEE Transactions on Evolutionary Computation 5(4) | grammar-constrained EA |
 | [island-ga](island-ga.md) | The Distributed Genetic Algorithm Revisited | Belding | 1995 | ICGA-95 | parallel / distributed GA |
 | [lmx](lmx.md) | Language Model Crossover: Variation through Few-Shot Prompting | Meyerson, Nelson, Bradley, Gaier, Moradi, Hoover, Lehman | 2023 / 2024 | arXiv / ACM TELO | LLM-driven evolution (foundational) |

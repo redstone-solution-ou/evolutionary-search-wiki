@@ -69,6 +69,12 @@ within a section are sorted alphabetically.
 - [papers/alphazero.md](papers/alphazero.md) — Silver et al., DeepMind
   2017/2018. Self-play coevolution at scale; mastered chess, shogi,
   and Go from random play with a single algorithm.
+- [papers/eppo.md](papers/eppo.md) — Videau, Leite, Schoenauer,
+  Teytaud, 2024 preprint / 2026 v2. Evolutionary Pre-Prompt
+  Optimization: comparison-based discrete EA (Nevergrad) over an
+  integer-index genome of few-shot CoT examples; information-theoretic
+  generalization bound `κ^b · δ_{1,ε}`; >10 exact-match-point gains on
+  GSM8k and MathQA for LLaMA2-70B.
 - [papers/grammatical-evolution.md](papers/grammatical-evolution.md) —
   O'Neill & Ryan, IEEE TEC 2001. Grammatical Evolution; classical
   evolutionary framework for grammar/schema-constrained structured
