@@ -510,3 +510,50 @@ concurrent ICLR 2024 GA/DE-flavoured cousin; ingest scheduled as the
 next branch in this autonomous run, with the
 `evolutionary-prompt-optimization` concept page to follow once both
 papers and EPPO are leaves.
+
+## [2026-04-29] ingest | EvoPrompt (Guo, Wang, Guo, Li, Song, Tan, Liu, Bian, Yang, arXiv:2309.08532)
+
+Added Qingyan Guo et al., *"EvoPrompt: Connecting LLMs with
+Evolutionary Algorithms Yields Powerful Prompt Optimizers"*, ICLR
+2024. EvoPrompt connects LLMs to classical EAs by instructing the LLM
+in natural language to perform mutation and crossover on candidate
+prompts, while keeping the EA scaffold (selection, fitness on a dev
+set, population update) classical. Two instantiations: **EvoPrompt
+(GA)** with roulette-wheel selection and a two-step
+crossover-then-mutate template, and **EvoPrompt (DE)** with a
+four-step Differential-Evolution template that identifies different
+parts between two parents, mutates only those, combines with the
+current best, and crosses over with the base prompt. Evaluated on 31
+datasets across language understanding (7), generation (2), and
+Big-Bench Hard (22), on both Alpaca-7B and GPT-3.5. Differential
+Evolution wins on harder generation and Big-Bench Hard tasks (up to
+25% improvement on individual BBH tasks; 3.5% average) and on
+low-quality initial populations; Genetic Algorithm edges out on
+simpler classification. Open source at
+[github.com/beeevita/EvoPrompt](https://github.com/beeevita/EvoPrompt).
+
+Created [papers/evoprompt.md](papers/evoprompt.md) following the
+leaf-as-mirror schema; two H3 subsections in *Method at a glance*
+carry the load-bearing rationale (`### Why mutation-on-different-parts
+is the load-bearing DE choice` and `### Why the selection strategy
+and population quality are reported`).
+
+Slotted into the existing *"Evolutionary search over LLM prompts"*
+lineage in [papers/papers.md](papers/papers.md) (now three leaves:
+EPPO, Promptbreeder, EvoPrompt); added to the alphabetical index.
+Cross-linked into
+[concepts/llm-driven-evolution.md](concepts/llm-driven-evolution.md)
+under *Design choices in the literature*. Updated
+[index.md](index.md) and the canonical-slug list in
+[../CLAUDE.md](../CLAUDE.md).
+
+Thirteen paper leaves now (`alphaevolve`, `alphazero`, `eppo`,
+`evoprompt`, `grammatical-evolution`, `island-ga`, `lmx`, `mcc`,
+`model-merging`, `paired`, `plr`, `promptbreeder`, `shinkaevolve`).
+
+The `evolutionary-prompt-optimization` concept page (covering EPPO,
+Promptbreeder, EvoPrompt as the three exemplars) is the next
+scheduled branch in this autonomous run — the lineage now has the
+critical mass of three papers required to motivate a dedicated
+concept page rather than relying on the inverted-pattern note in
+`llm-driven-evolution.md`.
