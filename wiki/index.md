@@ -75,6 +75,12 @@ within a section are sorted alphabetically.
   integer-index genome of few-shot CoT examples; information-theoretic
   generalization bound `κ^b · δ_{1,ε}`; >10 exact-match-point gains on
   GSM8k and MathQA for LLaMA2-70B.
+- [papers/evoprompt.md](papers/evoprompt.md) — Guo, Wang, Guo, Li,
+  Song, Tan, Liu, Bian, Yang, ICLR 2024. EvoPrompt: connects LLMs
+  (Alpaca-7B, GPT-3.5) with classical EAs (Genetic Algorithm,
+  Differential Evolution) as variation operators; LLM templated to
+  perform mutation/crossover; 31 datasets; up to 25% gains on
+  Big-Bench Hard for the Differential Evolution variant.
 - [papers/grammatical-evolution.md](papers/grammatical-evolution.md) —
   O'Neill & Ryan, IEEE TEC 2001. Grammatical Evolution; classical
   evolutionary framework for grammar/schema-constrained structured

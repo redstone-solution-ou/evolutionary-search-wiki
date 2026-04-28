@@ -159,6 +159,22 @@ LLM samples, where prior LLM-driven approaches needed thousands.
   evolved task-prompt `"SOLUTION:"`. The most explicit instantiation
   of "LLM as the variation operator" outside the program-evolution
   setting.
+- **[EvoPrompt](../papers/evoprompt.md)** (Guo, Wang, Guo, Li, Song,
+  Tan, Liu, Bian & Yang, Tsinghua / Microsoft Research /
+  Northeastern, ICLR 2024) — concurrent ICLR 2024 cousin to
+  Promptbreeder: instantiates the LLM-as-variation-operator pattern
+  with two explicit classical EAs (Genetic Algorithm with
+  roulette-wheel selection and a two-step `crossover-then-mutate` LLM
+  template; Differential Evolution with a four-step template that
+  identifies different parts between two parents, mutates only those,
+  combines with the current best, and crosses over with the base
+  prompt). Unlike Promptbreeder, EvoPrompt does *not* evolve the
+  mutation/crossover templates themselves — they are hand-designed and
+  held fixed. Demonstrates on 31 datasets that the choice of EA
+  matters under LLM-as-variation: Differential Evolution wins on harder
+  generation and Big-Bench Hard tasks and on low-quality initial
+  populations, while Genetic Algorithm edges out on simpler
+  classification.
 - **AlphaEvolve** ([papers/alphaevolve.md](../papers/alphaevolve.md)) —
   scaled-up successor to FunSearch: full files instead of single
   functions, SOTA LLMs, hours-long evaluations, parallel

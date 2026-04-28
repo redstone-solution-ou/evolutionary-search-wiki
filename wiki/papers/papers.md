@@ -202,6 +202,21 @@ self-referential loop.
   generalises beyond mathematical reasoning to ETHOS hate-speech
   classification at 89% (vs 80% hand-designed). The canonical reference
   for *self-referential* prompt evolution.
+- [EvoPrompt](evoprompt.md) — *"EvoPrompt: Connecting LLMs with
+  Evolutionary Algorithms Yields Powerful Prompt Optimizers"*, Guo,
+  Wang, Guo, Li, Song, Tan, Liu, Bian & Yang, Tsinghua / Microsoft
+  Research / Northeastern, ICLR 2024. The cleanest "LLM as
+  evolutionary operator" reference for prompts: instantiates the
+  classical EA scaffold with two distinct algorithms — Genetic
+  Algorithm (roulette-wheel selection, two-step LLM crossover-then-
+  mutate template) and Differential Evolution (four-step template
+  that identifies different parts between two parents, mutates only
+  those, combines with current best, then crosses over with the base
+  prompt). Evaluated on 31 datasets across language understanding,
+  generation, and Big-Bench Hard with both Alpaca-7B and GPT-3.5;
+  Differential Evolution wins on harder generation and Big-Bench Hard
+  tasks while Genetic Algorithm edges out on simpler classification.
+  Open-source release, including the discovered optimal prompts.
 - [EPPO](eppo.md) — *"Evolutionary Pre-Prompt Optimization for
   Mathematical Reasoning"*, Videau, Leite, Schoenauer & Teytaud, 2024
   preprint / 2026 v2. Encodes a few-shot Chain-of-Thought pre-prompt as
@@ -250,6 +265,7 @@ tag for quick lookup:
 | [alphaevolve](alphaevolve.md) | AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery | Novikov, Vũ, Eisenberger et al. | 2025 | Google DeepMind white paper | LLM-driven program evolution |
 | [alphazero](alphazero.md) | Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm | Silver, Hubert, Schrittwieser et al. | 2017 / 2018 | arXiv / Science | self-play coevolution |
 | [eppo](eppo.md) | Evolutionary Pre-Prompt Optimization for Mathematical Reasoning | Videau, Leite, Schoenauer, Teytaud | 2024 / 2026 | arXiv preprint | evolutionary search over LLM prompts |
+| [evoprompt](evoprompt.md) | EvoPrompt: Connecting LLMs with Evolutionary Algorithms Yields Powerful Prompt Optimizers | Guo, Wang, Guo, Li, Song, Tan, Liu, Bian, Yang | 2023 / 2024 | ICLR 2024 | evolutionary search over LLM prompts |
 | [grammatical-evolution](grammatical-evolution.md) | Grammatical Evolution | O'Neill, Ryan | 2001 | IEEE Transactions on Evolutionary Computation 5(4) | grammar-constrained EA |
 | [island-ga](island-ga.md) | The Distributed Genetic Algorithm Revisited | Belding | 1995 | ICGA-95 | parallel / distributed GA |
 | [lmx](lmx.md) | Language Model Crossover: Variation through Few-Shot Prompting | Meyerson, Nelson, Bradley, Gaier, Moradi, Hoover, Lehman | 2023 / 2024 | arXiv / ACM TELO | LLM-driven evolution (foundational) |
