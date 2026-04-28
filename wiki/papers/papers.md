@@ -172,18 +172,36 @@ random mutation could not achieve on programs.
 
 ## Evolutionary search over LLM prompts
 
-The methodological mirror of the LLM-driven-program-evolution thread
-above. There the LLM is *inside* the search loop as the variation
-operator and an external evaluator scores each candidate program; here
-the LLM is *outside* the search loop as the fitness oracle, and a
-classical discrete evolutionary algorithm is the variation operator.
-The genome is no longer source code but a list of integer indices into
-a curated pool of demonstrations. The motivation is theoretical as much
-as empirical: comparison-based feedback bounds the size of the
-effective hypothesis class via simple union-bound information-theoretic
-arguments, giving certifiable generalization guarantees that
-gradient-based fine-tuning and per-example retrieval cannot offer.
+A lineage that takes the question of "what should we put in front of a
+fixed LLM at inference time?" and answers it with population-based
+evolutionary search. Two complementary subpatterns coexist. In the
+first, exemplified by EPPO below, the LLM is held *outside* the search
+loop as the fitness oracle and a classical comparison-based discrete
+EA is the variation operator over an integer-index genome — the
+methodological mirror of the LLM-driven program-evolution thread above,
+with the bonus of an information-theoretic generalization bound from
+the coarse comparison-only feedback signal. In the second, exemplified
+by Promptbreeder, the LLM is itself the variation operator on a
+natural-language genome — the prompt-flavoured analogue of the
+LLM-as-mutator program-evolution lineage, with the additional twist
+that the *mutation-prompts* are themselves under selection in a
+self-referential loop.
 
+- [Promptbreeder](promptbreeder.md) — *"Promptbreeder: Self-Referential
+  Self-Improvement via Prompt Evolution"*, Fernando, Banarse,
+  Michalewski, Osindero & Rocktäschel, Google DeepMind 2023 preprint /
+  ICML 2024. Evolves a population of (task-prompt, mutation-prompt)
+  pairs with PaLM 2-L acting as the variation operator on both. Nine
+  mutation operators across five classes — direct, estimation-of-
+  distribution, hyper-mutation of the mutation-prompt itself,
+  Lamarckian working-out-to-task-prompt, and prompt
+  crossover / context shuffling — driven by binary-tournament selection
+  on a population of 50 over 20–30 generations. Reaches 83.9% zero-shot
+  on GSM8K with the unintuitive evolved task-prompt `"SOLUTION:"`,
+  surpassing OPRO and Plan-and-Solve on identical underlying LLMs;
+  generalises beyond mathematical reasoning to ETHOS hate-speech
+  classification at 89% (vs 80% hand-designed). The canonical reference
+  for *self-referential* prompt evolution.
 - [EPPO](eppo.md) — *"Evolutionary Pre-Prompt Optimization for
   Mathematical Reasoning"*, Videau, Leite, Schoenauer & Teytaud, 2024
   preprint / 2026 v2. Encodes a few-shot Chain-of-Thought pre-prompt as
@@ -239,6 +257,7 @@ tag for quick lookup:
 | [model-merging](model-merging.md) | Evolutionary Optimization of Model Merging Recipes | Akiba, Shing, Tang, Sun, Ha | 2024 | Sakana AI / Nature Machine Intelligence | evolutionary merging of trained weights |
 | [paired](paired.md) | Emergent Complexity and Zero-shot Transfer via Unsupervised Environment Design | Dennis, Jaques, Vinitsky et al. | 2020 | NeurIPS | deep RL / UED |
 | [plr](plr.md) | Prioritized Level Replay | Jiang, Grefenstette, Rocktäschel | 2021 | ICML | deep RL / UED (replay-based) |
+| [promptbreeder](promptbreeder.md) | Promptbreeder: Self-Referential Self-Improvement via Prompt Evolution | Fernando, Banarse, Michalewski, Osindero, Rocktäschel | 2023 / 2024 | arXiv preprint / ICML 2024 | evolutionary search over LLM prompts |
 | [shinkaevolve](shinkaevolve.md) | ShinkaEvolve: Towards Open-Ended and Sample-Efficient Program Evolution | Lange, Imajuku, Cetin | 2025 | Sakana AI tech report | LLM-driven program evolution |
 
 ## Related wiki pages

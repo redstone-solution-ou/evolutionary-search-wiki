@@ -104,6 +104,13 @@ within a section are sorted alphabetically.
   ICML 2021. Prioritized Level Replay; the learned-adversary-free
   alternative to PAIRED, using value-function-derived learning-
   potential scores as replay priorities.
+- [papers/promptbreeder.md](papers/promptbreeder.md) — Fernando,
+  Banarse, Michalewski, Osindero, Rocktäschel, Google DeepMind 2023
+  preprint / ICML 2024. Self-referential prompt evolution: PaLM 2-L
+  acts as variation operator on both task-prompts and the
+  mutation-prompts that drive their evolution. 83.9% zero-shot on
+  GSM8K with the evolved prompt `"SOLUTION:"`; 89% on ETHOS hate
+  speech.
 - [papers/shinkaevolve.md](papers/shinkaevolve.md) — Lange, Imajuku,
   Cetin, Sakana AI 2025. Open-source, sample-efficient counterpart to
   AlphaEvolve; power-law parent sampling, code novelty rejection, and

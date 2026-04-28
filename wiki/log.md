@@ -466,3 +466,47 @@ ingested (Promptbreeder, Fernando et al. ICML 2024, is the obvious
 companion; Videau et al.'s own *Evolutionary Retrofitting*
 (arXiv:2410.11330) is another). For now the inverted-pattern note in
 `llm-driven-evolution.md` carries the cross-cutting framing.
+
+## [2026-04-28] ingest | Promptbreeder (Fernando, Banarse, Michalewski, Osindero, Rocktäschel, arXiv:2309.16797)
+
+Added Chrisantha Fernando, Dylan Banarse, Henryk Michalewski, Simon
+Osindero & Tim Rocktäschel, *"Promptbreeder: Self-Referential
+Self-Improvement via Prompt Evolution"*, Google DeepMind 2023
+preprint / ICML 2024. Promptbreeder evolves (task-prompt,
+mutation-prompt) pairs with PaLM 2-L acting as the variation operator
+on both — task-prompts are mutated by `LLM(M + P)` and mutation-prompts
+themselves are mutated by `LLM(H + M)` in a hyper-mutation step that
+makes the system self-referential. Nine concrete mutation operators in
+five classes (direct, EDA, hyper-mutation, Lamarckian,
+crossover/context-shuffling) drive a binary-tournament GA over a
+population of 50 for 20–30 generations. Reaches 83.9% zero-shot on
+GSM8K with the evolved task-prompt `"SOLUTION:"`, surpassing OPRO and
+Plan-and-Solve on the same underlying LLM; 89% on ETHOS hate-speech
+classification.
+
+Created [papers/promptbreeder.md](papers/promptbreeder.md) following
+the leaf-as-mirror schema; the load-bearing self-reference machinery
+is promoted to its own H3 (`### How self-reference is implemented`)
+inside *Method at a glance*, plus a second H3 on the diversity
+machinery that motivates the BERT-similarity rejection threshold.
+
+Slotted into the existing *"Evolutionary search over LLM prompts"*
+lineage in [papers/papers.md](papers/papers.md) (rewritten
+introduction paragraph to acknowledge the two complementary
+subpatterns: classical-EA + LLM-as-fitness-oracle vs LLM-as-mutator);
+added to the alphabetical index. Cross-linked into
+[concepts/llm-driven-evolution.md](concepts/llm-driven-evolution.md)
+as the most explicit instantiation of "LLM as variation operator"
+outside the program-evolution setting. Updated [index.md](index.md)
+and the canonical-slug list in [../CLAUDE.md](../CLAUDE.md).
+
+Twelve paper leaves now (`alphaevolve`, `alphazero`, `eppo`,
+`grammatical-evolution`, `island-ga`, `lmx`, `mcc`, `model-merging`,
+`paired`, `plr`, `promptbreeder`, `shinkaevolve`).
+
+EvoPrompt (Guo et al., ICLR 2024, arXiv:2309.08532) is referenced by
+name in the Promptbreeder leaf's *Follow-up work* section as the
+concurrent ICLR 2024 GA/DE-flavoured cousin; ingest scheduled as the
+next branch in this autonomous run, with the
+`evolutionary-prompt-optimization` concept page to follow once both
+papers and EPPO are leaves.
