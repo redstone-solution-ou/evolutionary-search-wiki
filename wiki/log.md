@@ -602,3 +602,67 @@ in order, four PRs landed on `main` — EPPO leaf (PR #3), Promptbreeder
 leaf (PR #4), EvoPrompt leaf (PR #5), and this concept page. Each on
 its own short-lived feature branch per the CLAUDE.md "one focused
 change per branch" rule.
+
+## [2026-05-04] queue | deferred ingest — Alexandrov, Cliff & Figuero 2021 (arXiv:2109.10429)
+
+Queued for ingest in a future session: Nik Alexandrov, Dave Cliff &
+Charlie Figuero, *"Exploring Coevolutionary Dynamics of Competitive
+Arms-Races Between Infinitely Diverse Heterogenous Adaptive Automated
+Trader-Agents"*, [arXiv:2109.10429](https://arxiv.org/abs/2109.10429),
+published in Springer (Agents and Multi-Agent Systems chapter, 2021).
+
+Why it fits the wiki: applies coevolutionary dynamics to a continuous,
+infinite strategy space of trader agents inside Dave Cliff's Bristol
+Stock Exchange (BSE) limit-order-book simulator
+([arXiv:1809.06027](https://arxiv.org/abs/1809.06027)). The strategies
+being coevolved are Parameterised-Response Zero-Intelligence (PRZI)
+traders ([arXiv:2103.11341](https://arxiv.org/abs/2103.11341)). The
+paper is honest about a real methodological limitation it surfaces —
+existing analytical tools fail to visualise the high-dimensional
+phase-space dynamics that arise in continuous strategy spaces — and
+releases open-source Python code on GitHub. Cliff is an established
+researcher in agent-based market microstructure (HBS / Adaptive
+Aggressiveness traders) with a long peer-reviewed track record.
+
+Ingest plan when budget allows:
+
+- Slug: `coevolutionary-trader-agents` (the paper has no snappy
+  acronym; PRZI is the strategy class, not the system).
+- PDF filename: `papers/coevolutionary-trader-agents_2109.10429.pdf`.
+- Lineage placement: a new section in
+  [papers/papers.md](papers/papers.md) titled *"Coevolution in
+  agent-based markets"* (or similar), placed near the other coevolution
+  threads. The thread should also mention the Bristol Stock Exchange
+  simulator (Cliff 2018) as a foundation reference and PRZI traders
+  (Cliff 2021) as the strategy-class reference, even if those don't
+  themselves get dedicated leaves on the first pass.
+- Concept-page touchpoints: [coevolution](concepts/coevolution.md)
+  (the paper is one of the few non-deep-RL coevolutionary instances
+  on the wiki — distinct from MCC, PAIRED, AlphaZero), and possibly
+  [open-ended-evolution](concepts/open-ended-evolution.md) (the
+  arms-race framing is open-ended in spirit).
+- Foundation touchpoints:
+  [evolutionary-computation](foundations/evolutionary-computation.md).
+- Optional companion ingests if the thread is extended:
+  Cliff 2018 BSE simulator paper as a foundation reference;
+  Allen & Karjalainen 1999 *Journal of Financial Economics* (canonical
+  GA-for-trading-rules reference, honest negative result after
+  transaction costs) as a foundation reference; Santa Fe Artificial
+  Stock Market (Arthur, Holland, LeBaron, Palmer, Tayler 1997) as a
+  foundation reference for evolutionary agent-based markets.
+
+Three other arxiv preprints in the same neighbourhood were searched
+and explicitly rejected as too risky to cite without first
+re-deriving the experimental protocol: the recent crypto-GA agent
+papers, alpha-mining LLM frameworks, and "QuantEvolve"-style
+multi-agent quant frameworks. Common failure modes in that subliterature
+are cherry-picked windows, no transaction-cost model, no walk-forward
+out-of-sample, and look-ahead leakage in the alpha-mining loop. None
+are automatically wrong, but the base rate of irreproducible positive
+results is high enough that they are not safe ingest candidates
+without independent protocol verification.
+
+This queue entry is the prevention-as-code analogue of "remember to
+ingest this later" — a future session reading the log tail at the
+start of a session (per the CLAUDE.md *Getting started* checklist)
+will see it without having to re-derive the search.
