@@ -403,9 +403,11 @@ alphaevolve   alphazero   eppo   evoprompt   grammatical-evolution   island-ga  
 When ingesting a new paper, pick a slug by lowercasing the model or
 algorithm short name and hyphenating. Likely future additions to seed
 into the slug table when they are ingested: `funsearch`, `poet`,
-`enhanced-poet`, `accel`, `plr`, `dual-curriculum-design`,
-`openevolve`, `codeevolve`, `eureka`, `darwin-godel-machine`, `neat`,
-`novelty-search`, `map-elites`, `cma-es`.
+`enhanced-poet`, `accel`, `dual-curriculum-design`, `openevolve`,
+`codeevolve`, `eureka`, `darwin-godel-machine`, `neat`,
+`novelty-search`, `map-elites`, `cma-es`, `coevolutionary-trader-agents`
+(Alexandrov/Cliff/Figuero 2021, arXiv:2109.10429 — see queued ingest
+entry in `wiki/log.md` dated 2026-05-04).
 
 ## Getting started in a new session
 
